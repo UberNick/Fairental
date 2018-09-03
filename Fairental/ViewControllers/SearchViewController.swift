@@ -23,8 +23,8 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         searchField.text = viewModel.address
-        pickupButton.titleLabel?.text = viewModel.displayPickup
-        dropoffButton.titleLabel?.text = viewModel.displayDropoff
+        pickupButton.setTitle(viewModel.displayPickup, for: .normal)
+        dropoffButton.setTitle(viewModel.displayDropoff, for: .normal)
     }
     
     @IBAction func pickupTapped(_ sender: Any) {
