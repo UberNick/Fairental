@@ -14,6 +14,7 @@
 		D1A6B2DD213DB4CB0051BCF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2DB213DB4CB0051BCF2 /* LaunchScreen.storyboard */; };
 		D1A6B2E8213DB4CB0051BCF2 /* FairentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */; };
 		D1A6B2F3213DB4CB0051BCF2 /* FairentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */; };
+		D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E27156213DC267003D0606 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D1A6B2EE213DB4CB0051BCF2 /* FairentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairentalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairentalUITests.swift; sourceTree = "<group>"; };
 		D1A6B2F4213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E27156213DC267003D0606 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,10 @@
 		D1A6B2D1213DB4CA0051BCF2 /* Fairental */ = {
 			isa = PBXGroup;
 			children = (
+				D1E27158213DC29A003D0606 /* DomainModels */,
+				D1E27155213DC243003D0606 /* ViewModels */,
+				D1E27154213DC216003D0606 /* ViewControllers */,
 				D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */,
-				D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */,
 				D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */,
 				D1A6B2D9213DB4CB0051BCF2 /* Assets.xcassets */,
 				D1A6B2DB213DB4CB0051BCF2 /* LaunchScreen.storyboard */,
@@ -123,6 +127,29 @@
 				D1A6B2F4213DB4CB0051BCF2 /* Info.plist */,
 			);
 			path = FairentalUITests;
+			sourceTree = "<group>";
+		};
+		D1E27154213DC216003D0606 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D1E27155213DC243003D0606 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D1E27156213DC267003D0606 /* SearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D1E27158213DC29A003D0606 /* DomainModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,
 			);

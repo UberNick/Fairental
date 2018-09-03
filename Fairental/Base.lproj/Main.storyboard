@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="1791" y="484"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="m7x-Wo-PHS">
             <objects>
-                <viewController id="sqX-MQ-oO7" sceneMemberID="viewController">
+                <viewController id="sqX-MQ-oO7" customClass="SearchViewController" customModule="Fairental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Z8-Wk-epz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,6 +52,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOH-fv-Spl">
                                 <rect key="frame" x="108" y="85" width="42" height="30"/>
                                 <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="pickupTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="a8i-Bt-oWJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop off:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vR-j9-inI">
                                 <rect key="frame" x="20" y="131" width="68" height="21"/>
@@ -62,10 +65,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSF-T3-aYZ">
                                 <rect key="frame" x="108" y="126" width="42" height="30"/>
                                 <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="dropoffTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="f5Z-3f-lWe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-Cs-gSV">
                                 <rect key="frame" x="307" y="160" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="r9Y-5W-JeZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,6 +97,11 @@
                         <viewLayoutGuide key="safeArea" id="3wf-kf-8GQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="5Lu-cY-3Bp"/>
+                    <connections>
+                        <outlet property="dropoffButton" destination="KSF-T3-aYZ" id="a0q-gh-8Lq"/>
+                        <outlet property="pickupButton" destination="iOH-fv-Spl" id="rWy-kf-DLm"/>
+                        <outlet property="searchField" destination="BQu-tN-uzk" id="hyF-u8-uEk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78h-ts-Hah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
