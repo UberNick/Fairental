@@ -34,14 +34,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQu-tN-uzk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BQu-tN-uzk">
                                 <rect key="frame" x="20" y="40" width="335" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="usA-Ds-BrR"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="location"/>
+                                <connections>
+                                    <action selector="searchTapped:" destination="sqX-MQ-oO7" eventType="primaryActionTriggered" id="MgS-VR-J1z"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick up: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-Gh-SlD">
                                 <rect key="frame" x="20" y="90" width="66" height="21"/>
@@ -78,6 +81,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="lBn-Cs-gSV" secondAttribute="trailing" constant="20" id="0eq-EM-P5A"/>
                             <constraint firstItem="KSF-T3-aYZ" firstAttribute="leading" secondItem="1vR-j9-inI" secondAttribute="trailing" constant="20" id="0gL-Ah-Jqt"/>
@@ -87,23 +91,30 @@
                             <constraint firstItem="Qmp-Gh-SlD" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" constant="20" id="PIY-es-IrP"/>
                             <constraint firstItem="iOH-fv-Spl" firstAttribute="leading" secondItem="Qmp-Gh-SlD" secondAttribute="trailing" constant="22" id="QzJ-Ed-5hQ"/>
                             <constraint firstItem="1vR-j9-inI" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" constant="20" id="SUf-ns-5pa"/>
+                            <constraint firstItem="lBn-Cs-gSV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Z8-Wk-epz" secondAttribute="leading" constant="20" symbolic="YES" id="biE-wc-1sS"/>
                             <constraint firstItem="lBn-Cs-gSV" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="90" id="hcO-Jf-Zh9"/>
                             <constraint firstItem="Qmp-Gh-SlD" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="20" id="hh9-jF-wei"/>
                             <constraint firstItem="iOH-fv-Spl" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="15" id="oev-oM-SFz"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KSF-T3-aYZ" secondAttribute="trailing" constant="20" symbolic="YES" id="qy4-QO-XbA"/>
                             <constraint firstItem="1vR-j9-inI" firstAttribute="top" secondItem="Qmp-Gh-SlD" secondAttribute="bottom" constant="20" id="sIc-oB-rgT"/>
-                            <constraint firstItem="KSF-T3-aYZ" firstAttribute="leading" secondItem="1vR-j9-inI" secondAttribute="trailing" constant="20" id="vu5-bf-hUH"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iOH-fv-Spl" secondAttribute="trailing" constant="20" symbolic="YES" id="tdF-71-7dR"/>
                             <constraint firstItem="BQu-tN-uzk" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" constant="20" id="yKf-bo-WqF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3wf-kf-8GQ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LPP-xv-ZGt" appends="YES" id="JP3-Mf-wgi"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="5Lu-cY-3Bp"/>
                     <connections>
+                        <outlet property="backgroundTap" destination="LPP-xv-ZGt" id="IED-rm-4lP"/>
                         <outlet property="dropoffButton" destination="KSF-T3-aYZ" id="a0q-gh-8Lq"/>
                         <outlet property="pickupButton" destination="iOH-fv-Spl" id="rWy-kf-DLm"/>
                         <outlet property="searchField" destination="BQu-tN-uzk" id="hyF-u8-uEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78h-ts-Hah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LPP-xv-ZGt"/>
             </objects>
             <point key="canvasLocation" x="1791" y="-180"/>
         </scene>

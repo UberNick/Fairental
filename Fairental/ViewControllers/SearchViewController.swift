@@ -14,11 +14,15 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var pickupButton: UIButton!
     @IBOutlet weak var dropoffButton: UIButton!
     
+    @IBOutlet var backgroundTap: UITapGestureRecognizer!
+    
     var viewModel: SearchViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SearchViewModel()
+        backgroundTap.addTarget(self, action: #selector(backgroundTapped(_:)))
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,4 +43,10 @@ class SearchViewController: UIViewController {
         let notification = Notification.Name("search")
         NotificationCenter.default.post(name: notification, object: viewModel)
     }
+    
+    @objc
+    @IBAction func backgroundTapped(_ sender: Any) {
+        searchField.resignFirstResponder()
+    }
+    
 }
