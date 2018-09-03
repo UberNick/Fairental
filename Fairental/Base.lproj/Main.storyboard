@@ -133,7 +133,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="5Lu-cY-3Bp"/>
                     <connections>
-                        <outlet property="backgroundTap" destination="LPP-xv-ZGt" id="IED-rm-4lP"/>
                         <outlet property="datePicker" destination="XWF-IT-c4S" id="skT-Gz-gnq"/>
                         <outlet property="dateToolbar" destination="gEh-y2-OZt" id="pvg-Xf-vQw"/>
                         <outlet property="dropoffButton" destination="KSF-T3-aYZ" id="a0q-gh-8Lq"/>

@@ -17,8 +17,6 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var dateToolbar: UIToolbar!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    @IBOutlet var backgroundTap: UITapGestureRecognizer!
-    
     var viewModel: SearchViewModel!
     var dateButtonEdited: UIButton?
     
@@ -46,10 +44,13 @@ class SearchViewController: UIViewController {
         }
     }
     
+    @IBAction func searchFieldTapped(_ sender: Any) {
+        hideDatePicker()
+    }
+    
     @IBAction func searchTapped(_ sender: Any) {
         print("search tapped")
         backgroundTapped(sender)
-        
         SearchDelegate().execute(viewModel)
     }
     
@@ -68,11 +69,13 @@ class SearchViewController: UIViewController {
     }
     
     func hideDatePicker(animated: Bool = false) {
+        dateButtonEdited = nil
         datePicker.isHidden = true
         dateToolbar.isHidden = true
     }
     
     func showDatePicker(animated: Bool = false) {
+        searchField.resignFirstResponder()
         datePicker.isHidden = false
         dateToolbar.isHidden = false
     }
