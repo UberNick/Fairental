@@ -15,6 +15,7 @@
 		D1A6B2E8213DB4CB0051BCF2 /* FairentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */; };
 		D1A6B2F3213DB4CB0051BCF2 /* FairentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */; };
 		D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E27156213DC267003D0606 /* SearchViewModel.swift */; };
+		D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairentalUITests.swift; sourceTree = "<group>"; };
 		D1A6B2F4213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E27156213DC267003D0606 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		D1A6B2D1213DB4CA0051BCF2 /* Fairental */ = {
 			isa = PBXGroup;
 			children = (
+				D1E27159213DDCCA003D0606 /* Delegates */,
 				D1E27158213DC29A003D0606 /* DomainModels */,
 				D1E27155213DC243003D0606 /* ViewModels */,
 				D1E27154213DC216003D0606 /* ViewControllers */,
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = DomainModels;
+			sourceTree = "<group>";
+		};
+		D1E27159213DDCCA003D0606 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */,
 				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,

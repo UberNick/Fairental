@@ -49,12 +49,11 @@ class SearchViewController: UIViewController {
     @IBAction func searchTapped(_ sender: Any) {
         print("search tapped")
         backgroundTapped(sender)
-        let notification = Notification.Name("search")
-        NotificationCenter.default.post(name: notification, object: viewModel)
+        
+        SearchDelegate().execute(viewModel)
     }
     
     @IBAction func dateDoneTapped(_ sender: Any) {
-        print("date done tapped")
         hideDatePicker(animated: true)
         if dateButtonEdited === pickupButton {
             viewModel.pickup = datePicker.date
