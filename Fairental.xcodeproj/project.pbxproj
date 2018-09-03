@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */; };
+		D1A6B2D5213DB4CA0051BCF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D4213DB4CA0051BCF2 /* ViewController.swift */; };
+		D1A6B2D8213DB4CA0051BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */; };
+		D1A6B2DA213DB4CB0051BCF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2D9213DB4CB0051BCF2 /* Assets.xcassets */; };
+		D1A6B2DD213DB4CB0051BCF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2DB213DB4CB0051BCF2 /* LaunchScreen.storyboard */; };
+		D1A6B2E8213DB4CB0051BCF2 /* FairentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */; };
+		D1A6B2F3213DB4CB0051BCF2 /* FairentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1A6B2E4213DB4CB0051BCF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1A6B2C7213DB4CA0051BCF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1A6B2CE213DB4CA0051BCF2;
+			remoteInfo = Fairental;
+		};
+		D1A6B2EF213DB4CB0051BCF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1A6B2C7213DB4CA0051BCF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1A6B2CE213DB4CA0051BCF2;
+			remoteInfo = Fairental;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1A6B2CF213DB4CA0051BCF2 /* Fairental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairental.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1A6B2D4213DB4CA0051BCF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1A6B2D7213DB4CA0051BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1A6B2D9213DB4CB0051BCF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1A6B2DC213DB4CB0051BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1A6B2DE213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6B2E3213DB4CB0051BCF2 /* FairentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairentalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairentalTests.swift; sourceTree = "<group>"; };
+		D1A6B2E9213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A6B2EE213DB4CB0051BCF2 /* FairentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairentalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairentalUITests.swift; sourceTree = "<group>"; };
+		D1A6B2F4213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1A6B2CC213DB4CA0051BCF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6B2E0213DB4CB0051BCF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6B2EB213DB4CB0051BCF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1A6B2C6213DB4CA0051BCF2 = {
+			isa = PBXGroup;
+			children = (
+				D1A6B2D1213DB4CA0051BCF2 /* Fairental */,
+				D1A6B2E6213DB4CB0051BCF2 /* FairentalTests */,
+				D1A6B2F1213DB4CB0051BCF2 /* FairentalUITests */,
+				D1A6B2D0213DB4CA0051BCF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1A6B2D0213DB4CA0051BCF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6B2CF213DB4CA0051BCF2 /* Fairental.app */,
+				D1A6B2E3213DB4CB0051BCF2 /* FairentalTests.xctest */,
+				D1A6B2EE213DB4CB0051BCF2 /* FairentalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1A6B2D1213DB4CA0051BCF2 /* Fairental */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */,
+				D1A6B2D4213DB4CA0051BCF2 /* ViewController.swift */,
+				D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */,
+				D1A6B2D9213DB4CB0051BCF2 /* Assets.xcassets */,
+				D1A6B2DB213DB4CB0051BCF2 /* LaunchScreen.storyboard */,
+				D1A6B2DE213DB4CB0051BCF2 /* Info.plist */,
+			);
+			path = Fairental;
+			sourceTree = "<group>";
+		};
+		D1A6B2E6213DB4CB0051BCF2 /* FairentalTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */,
+				D1A6B2E9213DB4CB0051BCF2 /* Info.plist */,
+			);
+			path = FairentalTests;
+			sourceTree = "<group>";
+		};
+		D1A6B2F1213DB4CB0051BCF2 /* FairentalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */,
+				D1A6B2F4213DB4CB0051BCF2 /* Info.plist */,
+			);
+			path = FairentalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1A6B2CE213DB4CA0051BCF2 /* Fairental */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A6B2F7213DB4CB0051BCF2 /* Build configuration list for PBXNativeTarget "Fairental" */;
+			buildPhases = (
+				D1A6B2CB213DB4CA0051BCF2 /* Sources */,
+				D1A6B2CC213DB4CA0051BCF2 /* Frameworks */,
+				D1A6B2CD213DB4CA0051BCF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fairental;
+			productName = Fairental;
+			productReference = D1A6B2CF213DB4CA0051BCF2 /* Fairental.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1A6B2E2213DB4CB0051BCF2 /* FairentalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A6B2FA213DB4CB0051BCF2 /* Build configuration list for PBXNativeTarget "FairentalTests" */;
+			buildPhases = (
+				D1A6B2DF213DB4CB0051BCF2 /* Sources */,
+				D1A6B2E0213DB4CB0051BCF2 /* Frameworks */,
+				D1A6B2E1213DB4CB0051BCF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1A6B2E5213DB4CB0051BCF2 /* PBXTargetDependency */,
+			);
+			name = FairentalTests;
+			productName = FairentalTests;
+			productReference = D1A6B2E3213DB4CB0051BCF2 /* FairentalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1A6B2ED213DB4CB0051BCF2 /* FairentalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1A6B2FD213DB4CB0051BCF2 /* Build configuration list for PBXNativeTarget "FairentalUITests" */;
+			buildPhases = (
+				D1A6B2EA213DB4CB0051BCF2 /* Sources */,
+				D1A6B2EB213DB4CB0051BCF2 /* Frameworks */,
+				D1A6B2EC213DB4CB0051BCF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1A6B2F0213DB4CB0051BCF2 /* PBXTargetDependency */,
+			);
+			name = FairentalUITests;
+			productName = FairentalUITests;
+			productReference = D1A6B2EE213DB4CB0051BCF2 /* FairentalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1A6B2C7213DB4CA0051BCF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Foo;
+				TargetAttributes = {
+					D1A6B2CE213DB4CA0051BCF2 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					D1A6B2E2213DB4CB0051BCF2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D1A6B2CE213DB4CA0051BCF2;
+					};
+					D1A6B2ED213DB4CB0051BCF2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = D1A6B2CE213DB4CA0051BCF2;
+					};
+				};
+			};
+			buildConfigurationList = D1A6B2CA213DB4CA0051BCF2 /* Build configuration list for PBXProject "Fairental" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1A6B2C6213DB4CA0051BCF2;
+			productRefGroup = D1A6B2D0213DB4CA0051BCF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1A6B2CE213DB4CA0051BCF2 /* Fairental */,
+				D1A6B2E2213DB4CB0051BCF2 /* FairentalTests */,
+				D1A6B2ED213DB4CB0051BCF2 /* FairentalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1A6B2CD213DB4CA0051BCF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6B2DD213DB4CB0051BCF2 /* LaunchScreen.storyboard in Resources */,
+				D1A6B2DA213DB4CB0051BCF2 /* Assets.xcassets in Resources */,
+				D1A6B2D8213DB4CA0051BCF2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6B2E1213DB4CB0051BCF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6B2EC213DB4CB0051BCF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1A6B2CB213DB4CA0051BCF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6B2D5213DB4CA0051BCF2 /* ViewController.swift in Sources */,
+				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6B2DF213DB4CB0051BCF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6B2E8213DB4CB0051BCF2 /* FairentalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6B2EA213DB4CB0051BCF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A6B2F3213DB4CB0051BCF2 /* FairentalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1A6B2E5213DB4CB0051BCF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1A6B2CE213DB4CA0051BCF2 /* Fairental */;
+			targetProxy = D1A6B2E4213DB4CB0051BCF2 /* PBXContainerItemProxy */;
+		};
+		D1A6B2F0213DB4CB0051BCF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1A6B2CE213DB4CA0051BCF2 /* Fairental */;
+			targetProxy = D1A6B2EF213DB4CB0051BCF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A6B2D7213DB4CA0051BCF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1A6B2DB213DB4CB0051BCF2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1A6B2DC213DB4CB0051BCF2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1A6B2F5213DB4CB0051BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1A6B2F6213DB4CB0051BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1A6B2F8213DB4CB0051BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Fairental/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.Fairental;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1A6B2F9213DB4CB0051BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Fairental/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.Fairental;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1A6B2FB213DB4CB0051BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FairentalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.FairentalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fairental.app/Fairental";
+			};
+			name = Debug;
+		};
+		D1A6B2FC213DB4CB0051BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FairentalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.FairentalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fairental.app/Fairental";
+			};
+			name = Release;
+		};
+		D1A6B2FE213DB4CB0051BCF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FairentalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.FairentalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Fairental;
+			};
+			name = Debug;
+		};
+		D1A6B2FF213DB4CB0051BCF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FairentalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.FairentalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Fairental;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1A6B2CA213DB4CA0051BCF2 /* Build configuration list for PBXProject "Fairental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6B2F5213DB4CB0051BCF2 /* Debug */,
+				D1A6B2F6213DB4CB0051BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A6B2F7213DB4CB0051BCF2 /* Build configuration list for PBXNativeTarget "Fairental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6B2F8213DB4CB0051BCF2 /* Debug */,
+				D1A6B2F9213DB4CB0051BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A6B2FA213DB4CB0051BCF2 /* Build configuration list for PBXNativeTarget "FairentalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6B2FB213DB4CB0051BCF2 /* Debug */,
+				D1A6B2FC213DB4CB0051BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1A6B2FD213DB4CB0051BCF2 /* Build configuration list for PBXNativeTarget "FairentalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A6B2FE213DB4CB0051BCF2 /* Debug */,
+				D1A6B2FF213DB4CB0051BCF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1A6B2C7213DB4CA0051BCF2 /* Project object */;
+}
