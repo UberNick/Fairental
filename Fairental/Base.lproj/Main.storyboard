@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvE-vy-eji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="484"/>
+            <point key="canvasLocation" x="1791" y="561"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="m7x-Wo-PHS">
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="108" y="85" width="42" height="30"/>
                                 <state key="normal" title="Today"/>
                                 <connections>
-                                    <action selector="pickupTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="a8i-Bt-oWJ"/>
+                                    <action selector="dateButtonTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="78S-UZ-6Tx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drop off:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vR-j9-inI">
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="108" y="126" width="42" height="30"/>
                                 <state key="normal" title="Today"/>
                                 <connections>
-                                    <action selector="dropoffTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="f5Z-3f-lWe"/>
+                                    <action selector="dateButtonTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="5Qs-hk-1KB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBn-Cs-gSV">
@@ -79,21 +79,47 @@
                                     <action selector="searchTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="r9Y-5W-JeZ"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="XWF-IT-c4S">
+                                <rect key="frame" x="0.0" y="456" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="dFr-TE-vUY"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="557699518.34850299">
+                                    <!--2018-09-03 20:31:58 +0000-->
+                                </date>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-y2-OZt">
+                                <rect key="frame" x="0.0" y="412" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jIu-wC-Uex"/>
+                                    <barButtonItem title="Done" id="Dw6-kD-HFH">
+                                        <connections>
+                                            <action selector="dateDoneTapped:" destination="sqX-MQ-oO7" id="8Xb-dW-ViE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="lBn-Cs-gSV" secondAttribute="trailing" constant="20" id="0eq-EM-P5A"/>
                             <constraint firstItem="KSF-T3-aYZ" firstAttribute="leading" secondItem="1vR-j9-inI" secondAttribute="trailing" constant="20" id="0gL-Ah-Jqt"/>
+                            <constraint firstItem="XWF-IT-c4S" firstAttribute="top" secondItem="gEh-y2-OZt" secondAttribute="bottom" id="5W6-kP-bYn"/>
                             <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="BQu-tN-uzk" secondAttribute="trailing" constant="20" id="7Ew-KS-yJL"/>
                             <constraint firstItem="BQu-tN-uzk" firstAttribute="top" secondItem="3wf-kf-8GQ" secondAttribute="top" constant="20" id="G23-Ba-o8v"/>
                             <constraint firstItem="KSF-T3-aYZ" firstAttribute="top" secondItem="iOH-fv-Spl" secondAttribute="bottom" constant="11" id="JnD-0e-aLC"/>
+                            <constraint firstItem="XWF-IT-c4S" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" id="OpG-gZ-HxK"/>
                             <constraint firstItem="Qmp-Gh-SlD" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" constant="20" id="PIY-es-IrP"/>
                             <constraint firstItem="iOH-fv-Spl" firstAttribute="leading" secondItem="Qmp-Gh-SlD" secondAttribute="trailing" constant="22" id="QzJ-Ed-5hQ"/>
+                            <constraint firstItem="gEh-y2-OZt" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" id="RVp-he-AyU"/>
                             <constraint firstItem="1vR-j9-inI" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" constant="20" id="SUf-ns-5pa"/>
+                            <constraint firstItem="XWF-IT-c4S" firstAttribute="bottom" secondItem="3wf-kf-8GQ" secondAttribute="bottom" id="SzO-4p-A5p"/>
                             <constraint firstItem="lBn-Cs-gSV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Z8-Wk-epz" secondAttribute="leading" constant="20" symbolic="YES" id="biE-wc-1sS"/>
+                            <constraint firstItem="gEh-y2-OZt" firstAttribute="trailing" secondItem="3wf-kf-8GQ" secondAttribute="trailing" id="dLU-UX-XOc"/>
                             <constraint firstItem="lBn-Cs-gSV" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="90" id="hcO-Jf-Zh9"/>
                             <constraint firstItem="Qmp-Gh-SlD" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="20" id="hh9-jF-wei"/>
+                            <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="XWF-IT-c4S" secondAttribute="trailing" id="ib0-h6-nG1"/>
                             <constraint firstItem="iOH-fv-Spl" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="15" id="oev-oM-SFz"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KSF-T3-aYZ" secondAttribute="trailing" constant="20" symbolic="YES" id="qy4-QO-XbA"/>
                             <constraint firstItem="1vR-j9-inI" firstAttribute="top" secondItem="Qmp-Gh-SlD" secondAttribute="bottom" constant="20" id="sIc-oB-rgT"/>
@@ -108,15 +134,21 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="5Lu-cY-3Bp"/>
                     <connections>
                         <outlet property="backgroundTap" destination="LPP-xv-ZGt" id="IED-rm-4lP"/>
+                        <outlet property="datePicker" destination="XWF-IT-c4S" id="skT-Gz-gnq"/>
+                        <outlet property="dateToolbar" destination="gEh-y2-OZt" id="pvg-Xf-vQw"/>
                         <outlet property="dropoffButton" destination="KSF-T3-aYZ" id="a0q-gh-8Lq"/>
                         <outlet property="pickupButton" destination="iOH-fv-Spl" id="rWy-kf-DLm"/>
                         <outlet property="searchField" destination="BQu-tN-uzk" id="hyF-u8-uEk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78h-ts-Hah" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="LPP-xv-ZGt"/>
+                <tapGestureRecognizer id="LPP-xv-ZGt">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="sqX-MQ-oO7" id="AFE-L2-zdx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1791" y="-180"/>
+            <point key="canvasLocation" x="1789.5999999999999" y="-180.35982008995504"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jQD-UM-4Mw">

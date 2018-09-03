@@ -8,10 +8,16 @@
 
 import Foundation
 
-struct SearchViewModel {
+class SearchViewModel {
     var address: String = ""
     var pickup: Date = Date()
     var dropoff: Date = Date()
+    
+    lazy var formatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "EEE, MMM, d at h:mm a"
+        return df
+    }()
     
     var displayPickup: String {
         return "Today at Noon"
@@ -19,5 +25,9 @@ struct SearchViewModel {
     
     var displayDropoff: String {
         return "Tomorrow at 5:00pm"
+    }
+    
+    func formatted(_ date: Date) -> String {
+        return formatter.string(from: date)
     }
 }

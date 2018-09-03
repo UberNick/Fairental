@@ -14,15 +14,18 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var pickupButton: UIButton!
     @IBOutlet weak var dropoffButton: UIButton!
     
+    @IBOutlet weak var dateToolbar: UIToolbar!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet var backgroundTap: UITapGestureRecognizer!
     
     var viewModel: SearchViewModel!
+    var dateButtonEdited: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SearchViewModel()
-        backgroundTap.addTarget(self, action: #selector(backgroundTapped(_:)))
-        
+        hideDatePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,22 +34,47 @@ class SearchViewController: UIViewController {
         dropoffButton.setTitle(viewModel.displayDropoff, for: .normal)
     }
     
-    @IBAction func pickupTapped(_ sender: Any) {
-        // show date search input
-    }
-    
-    @IBAction func dropoffTapped(_ sender: Any) {
-        // show date search input
+    @IBAction func dateButtonTapped(_ sender: Any) {
+        dateButtonEdited = sender as? UIButton
+        showDatePicker(animated: true)
+        if dateButtonEdited === pickupButton {
+            datePicker.date = viewModel.pickup
+        } else if dateButtonEdited === dropoffButton {
+            datePicker.date = viewModel.dropoff
+        } else {
+            datePicker.date = Date()
+        }
     }
     
     @IBAction func searchTapped(_ sender: Any) {
+        print("search tapped")
+        backgroundTapped(sender)
         let notification = Notification.Name("search")
         NotificationCenter.default.post(name: notification, object: viewModel)
     }
     
-    @objc
+    @IBAction func dateDoneTapped(_ sender: Any) {
+        print("date done tapped")
+        hideDatePicker(animated: true)
+        if dateButtonEdited === pickupButton {
+            viewModel.pickup = datePicker.date
+        } else if dateButtonEdited === dropoffButton {
+            viewModel.dropoff = datePicker.date
+        }
+    }
+    
     @IBAction func backgroundTapped(_ sender: Any) {
+        hideDatePicker()
         searchField.resignFirstResponder()
     }
     
+    func hideDatePicker(animated: Bool = false) {
+        datePicker.isHidden = true
+        dateToolbar.isHidden = true
+    }
+    
+    func showDatePicker(animated: Bool = false) {
+        datePicker.isHidden = false
+        dateToolbar.isHidden = false
+    }
 }
