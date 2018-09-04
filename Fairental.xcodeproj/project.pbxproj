@@ -11,6 +11,7 @@
 		D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */; };
 		D19DA9CD213E19B800D4AE11 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
 		D19DA9CF213E1A7C00D4AE11 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */; };
+		D19DA9D3213E234C00D4AE11 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9D2213E234C00D4AE11 /* Networkable.swift */; };
 		D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */; };
 		D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */; };
 		D1A6B2D8213DB4CA0051BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		D19DA9CC213E19B800D4AE11 /* SearchResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchResponse.json; sourceTree = "<group>"; };
 		D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		D19DA9D2213E234C00D4AE11 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		D1A6B2CF213DB4CA0051BCF2 /* Fairental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		D1E27159213DDCCA003D0606 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				D19DA9D2213E234C00D4AE11 /* Networkable.swift */,
 				D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */,
 			);
 			path = Delegate;
@@ -307,6 +310,7 @@
 				D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */,
 				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
 				D19DA9CF213E1A7C00D4AE11 /* SearchResponse.swift in Sources */,
+				D19DA9D3213E234C00D4AE11 /* Networkable.swift in Sources */,
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
 				D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,

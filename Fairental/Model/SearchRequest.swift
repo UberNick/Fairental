@@ -7,9 +7,9 @@
 //
 
 struct SearchRequest: Codable {
-    var latitude: String //double
-    var longitude: String //double
-    var radius: String //int
+    var latitude: Double
+    var longitude: Double
+    var radius: Int
     var pickUp: String
     var dropOff: String    
 }
