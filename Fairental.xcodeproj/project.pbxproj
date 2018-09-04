@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
+		D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */; };
+		D19DA9CD213E19B800D4AE11 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
+		D19DA9CF213E1A7C00D4AE11 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */; };
 		D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */; };
 		D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */; };
 		D1A6B2D8213DB4CA0051BCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */; };
 		D1A6B2DA213DB4CB0051BCF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2D9213DB4CB0051BCF2 /* Assets.xcassets */; };
 		D1A6B2DD213DB4CB0051BCF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6B2DB213DB4CB0051BCF2 /* LaunchScreen.storyboard */; };
-		D1A6B2E8213DB4CB0051BCF2 /* FairentalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */; };
 		D1A6B2F3213DB4CB0051BCF2 /* FairentalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */; };
 		D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E27156213DC267003D0606 /* SearchViewModel.swift */; };
 		D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */; };
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		D19DA9CC213E19B800D4AE11 /* SearchResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchResponse.json; sourceTree = "<group>"; };
+		D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		D1A6B2CF213DB4CA0051BCF2 /* Fairental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fairental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +51,6 @@
 		D1A6B2DC213DB4CB0051BCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A6B2DE213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A6B2E3213DB4CB0051BCF2 /* FairentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairentalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairentalTests.swift; sourceTree = "<group>"; };
 		D1A6B2E9213DB4CB0051BCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A6B2EE213DB4CB0051BCF2 /* FairentalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairentalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6B2F2213DB4CB0051BCF2 /* FairentalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairentalUITests.swift; sourceTree = "<group>"; };
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D19DA9C9213E13F500D4AE11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */,
+				D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D1A6B2C6213DB4CA0051BCF2 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +116,10 @@
 		D1A6B2D1213DB4CA0051BCF2 /* Fairental */ = {
 			isa = PBXGroup;
 			children = (
-				D1E27159213DDCCA003D0606 /* Delegates */,
-				D1E27158213DC29A003D0606 /* DomainModels */,
-				D1E27155213DC243003D0606 /* ViewModels */,
-				D1E27154213DC216003D0606 /* ViewControllers */,
+				D1E27154213DC216003D0606 /* Controller */,
+				D1E27159213DDCCA003D0606 /* Delegate */,
+				D19DA9C9213E13F500D4AE11 /* Model */,
+				D1E27155213DC243003D0606 /* ViewModel */,
 				D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */,
 				D1A6B2D6213DB4CA0051BCF2 /* Main.storyboard */,
 				D1A6B2D9213DB4CB0051BCF2 /* Assets.xcassets */,
@@ -117,7 +132,8 @@
 		D1A6B2E6213DB4CB0051BCF2 /* FairentalTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1A6B2E7213DB4CB0051BCF2 /* FairentalTests.swift */,
+				D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */,
+				D19DA9CC213E19B800D4AE11 /* SearchResponse.json */,
 				D1A6B2E9213DB4CB0051BCF2 /* Info.plist */,
 			);
 			path = FairentalTests;
@@ -132,35 +148,28 @@
 			path = FairentalUITests;
 			sourceTree = "<group>";
 		};
-		D1E27154213DC216003D0606 /* ViewControllers */ = {
+		D1E27154213DC216003D0606 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		D1E27155213DC243003D0606 /* ViewModels */ = {
+		D1E27155213DC243003D0606 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				D1E27156213DC267003D0606 /* SearchViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		D1E27158213DC29A003D0606 /* DomainModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DomainModels;
-			sourceTree = "<group>";
-		};
-		D1E27159213DDCCA003D0606 /* Delegates */ = {
+		D1E27159213DDCCA003D0606 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */,
 			);
-			path = Delegates;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19DA9CD213E19B800D4AE11 /* SearchResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +306,9 @@
 			files = (
 				D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */,
 				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
+				D19DA9CF213E1A7C00D4AE11 /* SearchResponse.swift in Sources */,
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
+				D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A6B2E8213DB4CB0051BCF2 /* FairentalTests.swift in Sources */,
+				D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

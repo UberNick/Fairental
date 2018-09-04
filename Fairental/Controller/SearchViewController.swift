@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     var viewModel: SearchViewModel!
     var dateButtonEdited: UIButton?
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = SearchViewModel()
@@ -32,6 +33,7 @@ class SearchViewController: UIViewController {
         dropoffButton.setTitle(viewModel.displayDropoff, for: .normal)
     }
     
+    //MARK: - IBActions
     @IBAction func dateButtonTapped(_ sender: Any) {
         dateButtonEdited = sender as? UIButton
         showDatePicker(animated: true)
@@ -49,9 +51,8 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchTapped(_ sender: Any) {
-        print("search tapped")
-        backgroundTapped(sender)
-        SearchDelegate().execute(viewModel)
+        hideAllInputControls()
+        SearchDelegate(viewModel).execute()
     }
     
     @IBAction func dateDoneTapped(_ sender: Any) {
@@ -64,8 +65,14 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func backgroundTapped(_ sender: Any) {
-        hideDatePicker()
-        searchField.resignFirstResponder()
+        hideAllInputControls()
+    }
+    
+    //MARK: - Hide/Show Functions
+    func showDatePicker(animated: Bool = false) {
+        hideKeyboard()
+        datePicker.isHidden = false
+        dateToolbar.isHidden = false
     }
     
     func hideDatePicker(animated: Bool = false) {
@@ -74,9 +81,12 @@ class SearchViewController: UIViewController {
         dateToolbar.isHidden = true
     }
     
-    func showDatePicker(animated: Bool = false) {
+    func hideKeyboard() {
         searchField.resignFirstResponder()
-        datePicker.isHidden = false
-        dateToolbar.isHidden = false
+    }
+    
+    func hideAllInputControls(animated: Bool = false) {
+        hideDatePicker(animated: animated)
+        hideKeyboard()
     }
 }
