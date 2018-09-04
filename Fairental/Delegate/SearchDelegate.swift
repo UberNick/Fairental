@@ -24,23 +24,13 @@ class SearchDelegate: Networkable {
     }
     
     func execute() {
-        post("searchExecute")        
-        
-        guard let url = URL(string: endpoint),
-            let json = try? encoder.encode(requestData),
-            let requestDataDict  = try? JSONSerialization.jsonObject(with: json) as? [String: Any] else {
-                error()
-                return
-        }
-        
-        var params: [String: String] = ["apikey": apiKey]
-        requestDataDict?.forEach { key, value in
-            params[key] = "\(value)"
-        }
-        
+        post("searchExecute")
+        guard let url = URL(string: endpoint) else {
+            error()
+            return
+        }        
         var request = URLRequest(url: url)
-        request.allHTTPHeaderFields = params
-        
+        request.allHTTPHeaderFields = parameterize(requestData)
         let session = URLSession(configuration: .ephemeral)
         session.dataTask(with: request, completionHandler: response).resume()
     }
