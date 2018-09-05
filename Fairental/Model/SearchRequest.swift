@@ -10,6 +10,6 @@ struct SearchRequest: Codable {
     var latitude: Double
     var longitude: Double
     var radius: Int
-    var pickUp: String
-    var dropOff: String    
+    var pickUp: TimelessDate
+    var dropOff: TimelessDate
 }

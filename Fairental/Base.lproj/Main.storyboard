@@ -79,7 +79,7 @@
                                     <action selector="searchTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="r9Y-5W-JeZ"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="XWF-IT-c4S">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="XWF-IT-c4S">
                                 <rect key="frame" x="0.0" y="456" width="375" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="dFr-TE-vUY"/>

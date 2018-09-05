@@ -19,8 +19,8 @@ class SearchDelegate: Networkable {
             latitude: 35.1504,
             longitude: -114.57632,
             radius: 42,
-            pickUp: "2018-12-07",
-            dropOff: "2018-12-08")
+            pickUp: TimelessDate(string: "2018-12-07")!,
+            dropOff: TimelessDate(string: "2018-12-08")!)
     }
     
     func execute() {
