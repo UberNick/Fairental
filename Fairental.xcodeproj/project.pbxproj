@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF96213F67C600116B6D /* TimelessDateTests.swift */; };
+		D175EF99213F681600116B6D /* TimelessDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF98213F681600116B6D /* TimelessDate.swift */; };
 		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
 		D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */; };
 		D19DA9CD213E19B800D4AE11 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D175EF96213F67C600116B6D /* TimelessDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelessDateTests.swift; sourceTree = "<group>"; };
+		D175EF98213F681600116B6D /* TimelessDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessDate.swift; sourceTree = "<group>"; };
 		D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		D19DA9CC213E19B800D4AE11 /* SearchResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SearchResponse.json; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			children = (
 				D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */,
 				D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */,
+				D175EF98213F681600116B6D /* TimelessDate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */,
+				D175EF96213F67C600116B6D /* TimelessDateTests.swift */,
 				D19DA9CC213E19B800D4AE11 /* SearchResponse.json */,
 				D1A6B2E9213DB4CB0051BCF2 /* Info.plist */,
 			);
@@ -314,6 +320,7 @@
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
 				D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,
+				D175EF99213F681600116B6D /* TimelessDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */,
 				D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
