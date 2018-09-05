@@ -15,7 +15,7 @@ class SearchViewModel {
     
     lazy var formatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEE, MMM, d"
+        formatter.dateFormat = "EEEE, MMMM d"
         return formatter
     }()
     

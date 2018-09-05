@@ -35,7 +35,10 @@ class SearchViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func dateButtonTapped(_ sender: Any) {
-        dateButtonEdited = sender as? UIButton
+        guard let button = sender as? UIButton else {
+            return
+        }
+        dateButtonEdited = button
         showDatePicker(animated: true)
         if dateButtonEdited === pickupButton {
             datePicker.date = viewModel.pickup
@@ -57,10 +60,13 @@ class SearchViewController: UIViewController {
     
     @IBAction func dateDoneTapped(_ sender: Any) {
         hideDatePicker(animated: true)
+        
         if dateButtonEdited === pickupButton {
             viewModel.pickup = datePicker.date
+            pickupButton.setTitle(viewModel.displayPickup, for: .normal)
         } else if dateButtonEdited === dropoffButton {
             viewModel.dropoff = datePicker.date
+            dropoffButton.setTitle(viewModel.displayDropoff, for: .normal)
         }
     }
     
@@ -76,7 +82,6 @@ class SearchViewController: UIViewController {
     }
     
     func hideDatePicker(animated: Bool = false) {
-        dateButtonEdited = nil
         datePicker.isHidden = true
         dateToolbar.isHidden = true
     }
