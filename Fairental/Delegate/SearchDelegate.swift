@@ -36,6 +36,12 @@ class SearchDelegate: Networkable {
     }
     
     func response(data: Data?, response: URLResponse?, error: Error?) {
+        guard let data = data,
+            let rawResponse = String(data: data, encoding: .utf8) else {
+            self.error()
+            return
+        }
+        print(rawResponse)
         post("searchResponse")
     }
     
