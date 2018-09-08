@@ -41,4 +41,20 @@ extension Networkable {
         }
         return params
     }
+    
+    func parameterize2<T: Encodable>(_ data: T) -> [URLQueryItem] {
+        guard let json = try? encoder.encode(data),
+            let jsonObject = try? JSONSerialization.jsonObject(with: json),
+            let dataDict = jsonObject as? [String: Any] else {
+                return []
+        }
+        var params: [String: String] = ["apikey": apiKey]
+        var items: [URLQueryItem] = [URLQueryItem(name: "apikey", value: apiKey)]
+        dataDict.forEach { key, value in
+            params[key] = "\(value)"
+            items.append(URLQueryItem(name: key, value: "\(value)"))
+        }
+        return items
+    }
+    
 }
