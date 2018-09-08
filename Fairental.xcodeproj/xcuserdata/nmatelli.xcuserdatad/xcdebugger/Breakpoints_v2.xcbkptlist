@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fairental/Delegate/SearchDelegate.swift"
-            timestampString = "558132096.606541"
+            timestampString = "558132331.214339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "response(data:response:error:)"
             landmarkType = "7">
          </BreakpointContent>

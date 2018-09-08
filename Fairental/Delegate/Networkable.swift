@@ -29,32 +29,17 @@ extension Networkable {
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
     
-    func parameterize<T: Encodable>(_ data: T) -> [String: String] {
-        guard let json = try? encoder.encode(data),
-            let jsonObject = try? JSONSerialization.jsonObject(with: json),
-            let dataDict = jsonObject as? [String: Any] else {
-                return [:]
-        }
-        var params: [String: String] = ["apikey": apiKey]
-        dataDict.forEach { key, value in
-            params[key] = "\(value)"
-        }
-        return params
-    }
-    
-    func parameterize2<T: Encodable>(_ data: T) -> [URLQueryItem] {
+    func parameterize<T: Encodable>(_ data: T) -> [URLQueryItem] {
         guard let json = try? encoder.encode(data),
             let jsonObject = try? JSONSerialization.jsonObject(with: json),
             let dataDict = jsonObject as? [String: Any] else {
                 return []
         }
-        var params: [String: String] = ["apikey": apiKey]
-        var items: [URLQueryItem] = [URLQueryItem(name: "apikey", value: apiKey)]
+        var params: [URLQueryItem] = [URLQueryItem(name: "apikey", value: apiKey)]
         dataDict.forEach { key, value in
-            params[key] = "\(value)"
-            items.append(URLQueryItem(name: key, value: "\(value)"))
+            params.append(URLQueryItem(name: key, value: "\(value)"))
         }
-        return items
+        return params
     }
     
 }

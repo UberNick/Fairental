@@ -25,25 +25,13 @@ class SearchDelegate: Networkable {
     
     func execute() {
         post("searchExecute")
-        guard let urlComponents = URLComponents(string: endpoint) else {
+        var urlComponents = URLComponents(string: endpoint)
+        urlComponents?.queryItems = parameterize(requestData)
+        guard let url = urlComponents?.url else {
             error()
             return
         }
-        var components = urlComponents
-        components.queryItems = parameterize2(requestData)
-        
-        //urlComponents.queryItems = parameterize2(requestData)
-        
-        var request = URLRequest(url: components.url!)
-        
-        print(request.httpMethod)
-        
-        let foo = parameterize(requestData)
-        print(foo)
-        
-        //request.quer
-        request.allHTTPHeaderFields = parameterize(foo)
-        
+        let request = URLRequest(url: url)
         let session = URLSession(configuration: .ephemeral)
         session.dataTask(with: request, completionHandler: response).resume()
     }
