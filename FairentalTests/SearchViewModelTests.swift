@@ -16,5 +16,25 @@ class SearchViewModelTests: XCTestCase {
         super.setUp()
         target = SearchViewModel()
     }
+    
+    func testToday() {
+        let date = Date()
+        let dateLabel = target.formatted(date)
+        XCTAssertEqual("Today", dateLabel)
+    }
+    
+    func testTomorrow() {
+        var date = Date()
+        let day: Double = 60 * 60 * 24
+        date = date.addingTimeInterval(day)
+        let dateLabel = target.formatted(date)
+        XCTAssertEqual("Tomorrow", dateLabel)
+    }
+    
+    func testDDay() {
+        let components: DateComponents = DateComponents(calendar: Calendar.current, year: 1944, month: 06, day: 06)
+        let dateLabel = target.formatted(components.date!)
+        XCTAssertEqual("Tuesday, June 6", dateLabel)
+    }
         
 }

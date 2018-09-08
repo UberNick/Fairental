@@ -17,6 +17,7 @@
 		D10E9A3F2144774D004DF7A5 /* SearchDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3E2144774D004DF7A5 /* SearchDelegateTests.swift */; };
 		D10E9A4221447B55004DF7A5 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
 		D10E9A4321447BBD004DF7A5 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
+		D10E9A4521449035004DF7A5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A4421449035004DF7A5 /* ResultViewController.swift */; };
 		D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF96213F67C600116B6D /* TimelessDateTests.swift */; };
 		D175EF99213F681600116B6D /* TimelessDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF98213F681600116B6D /* TimelessDate.swift */; };
 		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
@@ -59,6 +60,7 @@
 		D10E9A3A21447264004DF7A5 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		D10E9A3C21447282004DF7A5 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		D10E9A3E2144774D004DF7A5 /* SearchDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegateTests.swift; sourceTree = "<group>"; };
+		D10E9A4421449035004DF7A5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		D175EF96213F67C600116B6D /* TimelessDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelessDateTests.swift; sourceTree = "<group>"; };
 		D175EF98213F681600116B6D /* TimelessDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessDate.swift; sourceTree = "<group>"; };
 		D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */,
+				D10E9A4421449035004DF7A5 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */,
 				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
 				D10E9A372144719E004DF7A5 /* Car.swift in Sources */,
+				D10E9A4521449035004DF7A5 /* ResultViewController.swift in Sources */,
 				D10E9A3B21447264004DF7A5 /* Rate.swift in Sources */,
 				D10E9A33214470E8004DF7A5 /* Location.swift in Sources */,
 				D10E9A392144720C004DF7A5 /* VehicleInfo.swift in Sources */,
