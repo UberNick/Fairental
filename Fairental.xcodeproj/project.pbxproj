@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D10E9A3121446FBF004DF7A5 /* CarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3021446FBF004DF7A5 /* CarProvider.swift */; };
+		D10E9A33214470E8004DF7A5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A32214470E8004DF7A5 /* Location.swift */; };
+		D10E9A352144713D004DF7A5 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A342144713D004DF7A5 /* Address.swift */; };
+		D10E9A372144719E004DF7A5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A362144719E004DF7A5 /* Car.swift */; };
+		D10E9A392144720C004DF7A5 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A382144720C004DF7A5 /* VehicleInfo.swift */; };
+		D10E9A3B21447264004DF7A5 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3A21447264004DF7A5 /* Rate.swift */; };
+		D10E9A3D21447282004DF7A5 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3C21447282004DF7A5 /* Price.swift */; };
 		D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF96213F67C600116B6D /* TimelessDateTests.swift */; };
 		D175EF99213F681600116B6D /* TimelessDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF98213F681600116B6D /* TimelessDate.swift */; };
 		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
@@ -42,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D10E9A3021446FBF004DF7A5 /* CarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarProvider.swift; sourceTree = "<group>"; };
+		D10E9A32214470E8004DF7A5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		D10E9A342144713D004DF7A5 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		D10E9A362144719E004DF7A5 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		D10E9A382144720C004DF7A5 /* VehicleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfo.swift; sourceTree = "<group>"; };
+		D10E9A3A21447264004DF7A5 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		D10E9A3C21447282004DF7A5 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		D175EF96213F67C600116B6D /* TimelessDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelessDateTests.swift; sourceTree = "<group>"; };
 		D175EF98213F681600116B6D /* TimelessDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessDate.swift; sourceTree = "<group>"; };
 		D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
@@ -93,6 +107,13 @@
 		D19DA9C9213E13F500D4AE11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D10E9A342144713D004DF7A5 /* Address.swift */,
+				D10E9A362144719E004DF7A5 /* Car.swift */,
+				D10E9A3A21447264004DF7A5 /* Rate.swift */,
+				D10E9A3C21447282004DF7A5 /* Price.swift */,
+				D10E9A382144720C004DF7A5 /* VehicleInfo.swift */,
+				D10E9A3021446FBF004DF7A5 /* CarProvider.swift */,
+				D10E9A32214470E8004DF7A5 /* Location.swift */,
 				D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */,
 				D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */,
 				D175EF98213F681600116B6D /* TimelessDate.swift */,
@@ -315,11 +336,18 @@
 			files = (
 				D1E2715B213DDCDB003D0606 /* SearchDelegate.swift in Sources */,
 				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
+				D10E9A372144719E004DF7A5 /* Car.swift in Sources */,
+				D10E9A3B21447264004DF7A5 /* Rate.swift in Sources */,
+				D10E9A33214470E8004DF7A5 /* Location.swift in Sources */,
+				D10E9A392144720C004DF7A5 /* VehicleInfo.swift in Sources */,
 				D19DA9CF213E1A7C00D4AE11 /* SearchResponse.swift in Sources */,
 				D19DA9D3213E234C00D4AE11 /* Networkable.swift in Sources */,
+				D10E9A3D21447282004DF7A5 /* Price.swift in Sources */,
+				D10E9A3121446FBF004DF7A5 /* CarProvider.swift in Sources */,
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
 				D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,
+				D10E9A352144713D004DF7A5 /* Address.swift in Sources */,
 				D175EF99213F681600116B6D /* TimelessDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

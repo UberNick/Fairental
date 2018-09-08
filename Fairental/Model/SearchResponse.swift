@@ -6,4 +6,11 @@
 //  Copyright © 2018 Foo. All rights reserved.
 //
 
-import Foundation
+struct SearchResponse: Codable {
+    var provider: CarProvider
+    var branchId: String
+    var location: Location
+    var airport: String
+    var address: Address
+    var cars: [Car]
+}
