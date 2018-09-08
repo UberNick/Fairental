@@ -12,9 +12,7 @@ struct SearchResponse: Codable {
 
 struct SearchResult: Codable {
     var provider: CarProvider
-    var branchId: String
-    var location: Location
-    var airport: String
-    var address: Address
+    var location: Location?
+    var airport: String?
     var cars: [Car]
 }

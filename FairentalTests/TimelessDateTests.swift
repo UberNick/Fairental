@@ -32,7 +32,7 @@ class DateStringTests: XCTestCase {
     func testInitFromString() {
         let string = "1970-01-01"
         let timelessDate = TimelessDate(string: string)
-        XCTAssertEqual(ComparisonResult.orderedSame, difference(epoch, to: timelessDate?.date))
+        XCTAssertEqual(ComparisonResult.orderedSame, difference(epoch, to: timelessDate?.date, precision: .day))
     }
     
     func testNilInit() {
