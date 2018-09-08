@@ -15,11 +15,12 @@
 		D10E9A3B21447264004DF7A5 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3A21447264004DF7A5 /* Rate.swift */; };
 		D10E9A3D21447282004DF7A5 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3C21447282004DF7A5 /* Price.swift */; };
 		D10E9A3F2144774D004DF7A5 /* SearchDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A3E2144774D004DF7A5 /* SearchDelegateTests.swift */; };
+		D10E9A4221447B55004DF7A5 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
+		D10E9A4321447BBD004DF7A5 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
 		D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF96213F67C600116B6D /* TimelessDateTests.swift */; };
 		D175EF99213F681600116B6D /* TimelessDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF98213F681600116B6D /* TimelessDate.swift */; };
 		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
 		D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CA213E142E00D4AE11 /* SearchRequest.swift */; };
-		D19DA9CD213E19B800D4AE11 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
 		D19DA9CF213E1A7C00D4AE11 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9CE213E1A7C00D4AE11 /* SearchResponse.swift */; };
 		D19DA9D3213E234C00D4AE11 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9D2213E234C00D4AE11 /* Networkable.swift */; };
 		D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6B2D2213DB4CA0051BCF2 /* AppDelegate.swift */; };
@@ -309,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10E9A4321447BBD004DF7A5 /* SearchResponse.json in Resources */,
 				D1A6B2DD213DB4CB0051BCF2 /* LaunchScreen.storyboard in Resources */,
 				D1A6B2DA213DB4CB0051BCF2 /* Assets.xcassets in Resources */,
 				D1A6B2D8213DB4CA0051BCF2 /* Main.storyboard in Resources */,
@@ -319,7 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D19DA9CD213E19B800D4AE11 /* SearchResponse.json in Resources */,
+				D10E9A4221447B55004DF7A5 /* SearchResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

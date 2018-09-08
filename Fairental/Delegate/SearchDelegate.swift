@@ -55,10 +55,13 @@ class SearchDelegate: Networkable {
         guard let data = data else {
             return nil
         }
-        guard let result = try? decoder.decode(SearchResponse.self, from: data) else {
+        var result: SearchResponse? = nil
+        do {
+            result = try decoder.decode(SearchResponse.self, from: data)
+        } catch {
             let rawResponse = String(data: data, encoding: .utf8)
             print("Error parsing response: \(rawResponse ?? ""))")
-            return nil
+            print(error)
         }
         return result
     }
