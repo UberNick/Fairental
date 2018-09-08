@@ -37,17 +37,29 @@ class SearchDelegate: Networkable {
     }
     
     func response(data: Data?, response: URLResponse?, error: Error?) {
-        guard let data = data,
-            let rawResponse = String(data: data, encoding: .utf8) else {
+        guard let data = data else {
             self.error()
             return
         }
-        print(rawResponse)
-        post("searchResponse")
+        post("searchResponse", decodeData(data))
     }
     
     func error() {
         post("searchError")
     }
     
+    func decodeData(_ data: Data?) -> SearchResponse? {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        guard let data = data else {
+            return nil
+        }
+        guard let result = try? decoder.decode(SearchResponse.self, from: data) else {
+            let rawResponse = String(data: data, encoding: .utf8)
+            print("Error parsing response: \(rawResponse ?? ""))")
+            return nil
+        }
+        return result
+    }
 }

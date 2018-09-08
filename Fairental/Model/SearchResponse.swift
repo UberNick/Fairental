@@ -7,6 +7,10 @@
 //
 
 struct SearchResponse: Codable {
+    var results: [SearchResult]
+}
+
+struct SearchResult: Codable {
     var provider: CarProvider
     var branchId: String
     var location: Location
