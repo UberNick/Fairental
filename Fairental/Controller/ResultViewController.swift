@@ -13,14 +13,20 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    var results: [SearchResult] = []
+    var viewModel: ResultViewModel!
+    var selectedCar: Car!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ResultViewModel()
         listen(SearchDelegate.Notification.execute.rawValue, #selector(resultsWillLoad))
         listen(SearchDelegate.Notification.response.rawValue, #selector(resultsDidLoad))
         listen(SearchDelegate.Notification.error.rawValue, #selector(resultsDidLoad))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as? CarDetailViewController)?.car = selectedCar
     }
     
     //MARK: - Notification Handlers
@@ -31,7 +37,7 @@ class ResultViewController: UIViewController {
     }
     
     @objc func resultsDidLoad(notification: Notification) {
-        results = (notification.object as? SearchResponse)?.results ?? []
+        viewModel.results = (notification.object as? SearchResponse)?.results ?? []
         DispatchQueue.main.async {
             self.spinner.stopAnimating()
             self.tableView.reloadData()
@@ -48,24 +54,26 @@ class ResultViewController: UIViewController {
 // MARK: - TableView Datasource
 extension ResultViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("numberOfSections: \(results.count)")
-        return results.count
+        return viewModel.results.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowsInSection: \(results[section].cars.count)")
-        return results[section].cars.count
+        return viewModel.results[section].cars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: .subtitle, reuseIdentifier: "resultCell")
+        let cell = createCell()        
+        cell.textLabel?.text = viewModel.getTitleText(indexPath)
+        cell.detailTextLabel?.text = viewModel.getDetailText(indexPath)
+        return cell
+    }
+    
+    func createCell() -> UITableViewCell {
         if let reuseCell = tableView.dequeueReusableCell(withIdentifier: "resultCell") {
-            cell = reuseCell
+            return reuseCell
         }
-        let result = results[indexPath.section]
-        let car = result.cars[indexPath.row]        
-        cell.textLabel?.text = "\(car.vehicleInfo.acrissCode)"
-        cell.detailTextLabel?.text = "\(car.vehicleInfo.type)"
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "resultCell")
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
@@ -75,4 +83,9 @@ extension ResultViewController: UITableViewDelegate {
     /*func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20.0
     }*/
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCar = viewModel.getCar(indexPath)
+        performSegue(withIdentifier: "detailView", sender: self)
+    }
 }

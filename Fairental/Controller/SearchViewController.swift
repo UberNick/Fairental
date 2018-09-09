@@ -33,6 +33,11 @@ class SearchViewController: UIViewController {
         dropoffButton.setTitle(viewModel.displayDropoff, for: .normal)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("segue from search VC: \(segue)")
+    }
+    
     //MARK: - IBActions
     @IBAction func dateButtonTapped(_ sender: Any) {
         guard let button = sender as? UIButton else {
