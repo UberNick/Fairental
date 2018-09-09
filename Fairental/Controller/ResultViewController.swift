@@ -13,6 +13,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    var results: [SearchResult] = []
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +31,11 @@ class ResultViewController: UIViewController {
     }
     
     @objc func resultsDidLoad(notification: Notification) {
+        results = (notification.object as? SearchResponse)?.results ?? []
         DispatchQueue.main.async {
             self.spinner.stopAnimating()
+            self.tableView.reloadData()
         }
-        
-        if let results = notification.object {
-            print("foo")
-        }
-        print("bar")
     }
     
     func listen(_ notificationName: String, _ selector: Selector) {
@@ -44,4 +43,30 @@ class ResultViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
     }
     
+}
+
+// MARK: - TableView Datasource
+extension ResultViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print("numberOfSections: \(results.count)")
+        return results.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("numberOfRowsInSection: \(results[section].cars.count)")
+        return results[section].cars.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "")
+        print(cell)
+        return cell ?? UITableViewCell()
+    }
+}
+
+// MARK: - TableView Delegate
+extension ResultViewController: UITableViewDelegate {
+    /*func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20.0
+    }*/
 }
