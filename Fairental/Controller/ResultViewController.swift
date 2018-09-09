@@ -31,6 +31,7 @@ class ResultViewController: UIViewController {
     
     //MARK: - Notification Handlers
     @objc func resultsWillLoad(notification: Notification) {
+        navigationController?.popToViewController(self, animated: false)
         DispatchQueue.main.async {
             self.spinner.startAnimating()
         }
@@ -80,9 +81,9 @@ extension ResultViewController: UITableViewDataSource {
 
 // MARK: - TableView Delegate
 extension ResultViewController: UITableViewDelegate {
-    /*func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
-    }*/
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.getProvider(section).companyName
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCar = viewModel.getCar(indexPath)
