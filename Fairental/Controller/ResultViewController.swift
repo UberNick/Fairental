@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController, Listenable {
+class ResultViewController: UIViewController, Listenable, AlertPresentable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -19,10 +19,12 @@ class ResultViewController: UIViewController, Listenable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         viewModel = ResultViewModel()
         listen(SearchDelegate.Notification.execute.rawValue, #selector(resultsWillLoad))
         listen(SearchDelegate.Notification.response.rawValue, #selector(resultsDidLoad))
         listen(SearchDelegate.Notification.error.rawValue, #selector(resultsDidLoad))
+        listen(SearchDelegate.Notification.error.rawValue, #selector(resultsDidFail))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,10 +35,11 @@ class ResultViewController: UIViewController, Listenable {
     
     //MARK: - Notification Handlers
     @objc func resultsWillLoad(notification: Notification) {
-        navigationController?.popToViewController(self, animated: false)
         DispatchQueue.main.async {
             self.spinner.startAnimating()
         }
+        navigationController?.popToViewController(self, animated: false)
+        viewModel.searchLocation = notification.object as? Location
     }
     
     @objc func resultsDidLoad(notification: Notification) {
@@ -45,6 +48,13 @@ class ResultViewController: UIViewController, Listenable {
             self.spinner.stopAnimating()
             self.tableView.reloadData()
         }
+        if viewModel.results.count == 0 {
+            presentAlert("No results.  Please try again.")
+        }
+    }
+    
+    @objc func resultsDidFail(notification: Notification) {
+        presentAlert("Error loading results.  Please try again.")
     }
 }
 

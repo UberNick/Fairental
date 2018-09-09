@@ -11,5 +11,6 @@ import Foundation
 struct DetailViewModel {
     var car: Car
     var provider: CarProvider
-    var location: Location?
+    var carLocation: Location?
+    var userLocation: Location?
 }

@@ -10,7 +10,7 @@ import CoreLocation
 
 class GeocodeDelegate: NSObject, CLLocationManagerDelegate, Notifiable {
 
-    var location: CLLocation!
+    var address: String!
     
     enum Notification: String {
         case execute = "GeocodeDelegate.execute"
@@ -18,13 +18,13 @@ class GeocodeDelegate: NSObject, CLLocationManagerDelegate, Notifiable {
         case error = "GeocodeDelegate.error"
     }
     
-    init(_ location: CLLocation) {
-        self.location = location
+    init(_ address: String) {
+        self.address = address
     }
     
     func execute() {
         post(Notification.execute.rawValue)
-        CLGeocoder().reverseGeocodeLocation(location, completionHandler: response)
+        CLGeocoder().geocodeAddressString(address, completionHandler: response)
     }
     
     func response(placemarks: [CLPlacemark]?, error: Error?) {

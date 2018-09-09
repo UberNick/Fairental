@@ -43,8 +43,8 @@ class DetailViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func directionButtonTapped(_ sender: Any) {
-        DirectionDelegate(viewModel).execute()
         // open directions page
-        (parent as? UITabBarController)?.selectedIndex = 2
+        (parent?.parent as? UITabBarController)?.selectedIndex = 2
+        DirectionDelegate(viewModel)?.execute()
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 
 class ResultViewModel {
     var results: [SearchResult] = []
+    var searchLocation: Location?
     
     func getProvider(_ section: Int) -> CarProvider {
         return results[section].provider
@@ -31,7 +32,8 @@ class ResultViewModel {
         return DetailViewModel(
             car: getCar(indexPath),
             provider: getProvider(indexPath.section),
-            location: getLocation(indexPath.section))
+            carLocation: getLocation(indexPath.section),
+            userLocation: searchLocation)
     }
     
     func getTitleText(_ indexPath: IndexPath) -> String {

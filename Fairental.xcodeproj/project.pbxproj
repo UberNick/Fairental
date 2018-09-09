@@ -27,6 +27,7 @@
 		D10E9A532145B4DD004DF7A5 /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A522145B4DD004DF7A5 /* Notifiable.swift */; };
 		D10E9A552145B59A004DF7A5 /* Listenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A542145B59A004DF7A5 /* Listenable.swift */; };
 		D10E9A572145BC47004DF7A5 /* ReverseGeocodeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A562145BC47004DF7A5 /* ReverseGeocodeDelegate.swift */; };
+		D10E9A592145C1C6004DF7A5 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A582145C1C6004DF7A5 /* AlertPresentable.swift */; };
 		D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF96213F67C600116B6D /* TimelessDateTests.swift */; };
 		D175EF99213F681600116B6D /* TimelessDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF98213F681600116B6D /* TimelessDate.swift */; };
 		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
@@ -79,6 +80,7 @@
 		D10E9A522145B4DD004DF7A5 /* Notifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		D10E9A542145B59A004DF7A5 /* Listenable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listenable.swift; sourceTree = "<group>"; };
 		D10E9A562145BC47004DF7A5 /* ReverseGeocodeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeDelegate.swift; sourceTree = "<group>"; };
+		D10E9A582145C1C6004DF7A5 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		D175EF96213F67C600116B6D /* TimelessDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelessDateTests.swift; sourceTree = "<group>"; };
 		D175EF98213F681600116B6D /* TimelessDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessDate.swift; sourceTree = "<group>"; };
 		D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				D10E9A542145B59A004DF7A5 /* Listenable.swift */,
+				D10E9A582145C1C6004DF7A5 /* AlertPresentable.swift */,
 				D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */,
 				D10E9A4421449035004DF7A5 /* ResultViewController.swift */,
 				D10E9A462144D459004DF7A5 /* DetailViewController.swift */,
@@ -373,6 +376,7 @@
 				D10E9A492144DC81004DF7A5 /* ResultViewModel.swift in Sources */,
 				D1E27157213DC267003D0606 /* SearchViewModel.swift in Sources */,
 				D10E9A372144719E004DF7A5 /* Car.swift in Sources */,
+				D10E9A592145C1C6004DF7A5 /* AlertPresentable.swift in Sources */,
 				D10E9A4521449035004DF7A5 /* ResultViewController.swift in Sources */,
 				D10E9A3B21447264004DF7A5 /* Rate.swift in Sources */,
 				D10E9A33214470E8004DF7A5 /* Location.swift in Sources */,

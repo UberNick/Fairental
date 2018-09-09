@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class SearchViewController: UIViewController, Listenable {
+class SearchViewController: UIViewController, Listenable, AlertPresentable {
 
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var pickupButton: UIButton!
@@ -33,9 +33,13 @@ class SearchViewController: UIViewController, Listenable {
         locationManager.delegate = self
         hideDatePicker()
         
-        listen(GeocodeDelegate.Notification.execute.rawValue, #selector(addressWillLoad))
-        listen(GeocodeDelegate.Notification.response.rawValue, #selector(addressDidLoad))
-        listen(GeocodeDelegate.Notification.error.rawValue, #selector(addressDidLoad))
+        //TODO init result VC so it registers for listeners
+        
+        listen(ReverseGeocodeDelegate.Notification.execute.rawValue, #selector(addressWillLoad))
+        listen(ReverseGeocodeDelegate.Notification.response.rawValue, #selector(addressDidLoad))
+        listen(ReverseGeocodeDelegate.Notification.error.rawValue, #selector(addressDidLoad))
+        
+        listen(GeocodeDelegate.Notification.response.rawValue, #selector(locationDidLoad))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +49,15 @@ class SearchViewController: UIViewController, Listenable {
     }
     
     //MARK: - Notification Handlers
+    @objc func locationDidLoad(notification: Notification) {
+        guard let placemark = notification.object as? CLPlacemark,
+            let location = placemark.location else {
+            return
+        }
+        viewModel.location = Location(latitude: location.coordinate.latitude,
+                                      longitude: location.coordinate.longitude)
+    }
+    
     @objc func addressWillLoad(notification: Notification) {
         DispatchQueue.main.async {
             self.spinner.startAnimating()
@@ -80,26 +93,32 @@ class SearchViewController: UIViewController, Listenable {
     
     @IBAction func locationTapped(_ sender: Any) {
         locationManager.requestWhenInUseAuthorization()
-        print("requesting locaton from locationTapped")
         locationManager.requestLocation()
         hideAllInputControls()
     }
     
     @IBAction func searchFieldTapped(_ sender: Any) {
-        print("bar")
         hideDatePicker()
     }
     
+    @IBAction func searchFieldEdited(_ sender: Any) {
+        viewModel.address = searchField.text ?? ""
+        GeocodeDelegate(viewModel.address).execute()
+    }
+    
     @IBAction func searchFieldAction(_ sender: Any) {
-        print("baz")
-        hideAllInputControls()
+        searchTapped(sender)
     }
     
     @IBAction func searchTapped(_ sender: Any) {
         hideAllInputControls()
+        guard let searchDelegate = SearchDelegate(viewModel) else {
+            presentAlert("Please select a location.")
+            return
+        }
         // open results page
         (parent as? UITabBarController)?.selectedIndex = 1
-        SearchDelegate(viewModel).execute()
+        searchDelegate.execute()
     }
     
     @IBAction func dateDoneTapped(_ sender: Any) {
@@ -150,19 +169,14 @@ extension SearchViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("location didUpdateLocations")
         guard let location = locations.last else {
             return
         }
         viewModel.location = Location(latitude: location.coordinate.latitude,
                                       longitude: location.coordinate.longitude)
-        GeocodeDelegate(location).execute()
+        ReverseGeocodeDelegate(location).execute()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("location didFailWithError")
-        print(error)
     }
-    
-
 }

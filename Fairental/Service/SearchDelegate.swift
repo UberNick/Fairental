@@ -13,6 +13,7 @@ class SearchDelegate: Networkable, Notifiable {
     let endpoint = "https://api.sandbox.amadeus.com/v1.2/cars/search-circle"
     
     private var requestData: SearchRequest!
+    private var location: Location?
     
     enum Notification: String {
         case execute = "SearchDelegate.execute"
@@ -20,17 +21,21 @@ class SearchDelegate: Networkable, Notifiable {
         case error = "SearchDelegate.error"
     }
     
-    init(_ model: SearchViewModel) {
+    required init?(_ model: SearchViewModel) {
+        guard let location = model.location else {
+            return nil
+        }
+        self.location = model.location
         requestData = SearchRequest(
-            latitude: model.location!.latitude,
-            longitude: model.location!.longitude,
+            latitude: location.latitude,
+            longitude: location.longitude,
             radius: 30,
             pickUp: TimelessDate(date: model.pickup)!,
             dropOff: TimelessDate(date: model.dropoff)!)
     }
     
     func execute() {
-        post(Notification.execute.rawValue)
+        post(Notification.execute.rawValue, location)
         var urlComponents = URLComponents(string: endpoint)
         urlComponents?.queryItems = parameterize(requestData)
         guard let url = urlComponents?.url else {

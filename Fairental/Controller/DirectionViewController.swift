@@ -9,12 +9,41 @@
 import UIKit
 import MapKit
 
-class DirectionViewController: UIViewController {
+class DirectionViewController: UIViewController, Listenable {
     
     @IBOutlet weak var mapView: MKMapView!
-    
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
-        print("Hello, world")
+        listen(SearchDelegate.Notification.execute.rawValue, #selector(directionsWillLoad))
+        listen(SearchDelegate.Notification.response.rawValue, #selector(directionsDidLoad))
+    }
+    
+    //MARK: - Notification Handlers
+    @objc func directionsWillLoad(notification: Notification) {
+        /*DispatchQueue.main.async {
+            self.spinner.startAnimating()
+        }*/
+    }
+    
+    @objc func directionsDidLoad(notification: Notification) {
+        /*DispatchQueue.main.async {
+            self.spinner.stopAnimating()
+        }*/
+        guard let routes = notification.object as? [MKRoute] else {
+           return
+        }
+        routes.forEach { route in
+            mapView.add(route.polyline)
+            mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+        }
+    }
+}
+
+extension DirectionViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.blue
+        return renderer
     }
 }

@@ -252,6 +252,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="location"/>
                                 <connections>
                                     <action selector="searchFieldAction:" destination="sqX-MQ-oO7" eventType="primaryActionTriggered" id="jwF-ck-cmL"/>
+                                    <action selector="searchFieldEdited:" destination="sqX-MQ-oO7" eventType="editingChanged" id="yGg-tl-e9D"/>
                                     <action selector="searchFieldTapped:" destination="sqX-MQ-oO7" eventType="editingDidBegin" id="Pnu-1u-chE"/>
                                 </connections>
                             </textField>
