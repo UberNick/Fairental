@@ -55,6 +55,8 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchTapped(_ sender: Any) {
         hideAllInputControls()
+        // open results page
+        (parent as? UITabBarController)?.selectedIndex = 1
         SearchDelegate(viewModel).execute()
     }
     
