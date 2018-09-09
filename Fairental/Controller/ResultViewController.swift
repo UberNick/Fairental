@@ -58,9 +58,15 @@ extension ResultViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "")
-        print(cell)
-        return cell ?? UITableViewCell()
+        var cell = UITableViewCell(style: .subtitle, reuseIdentifier: "resultCell")
+        if let reuseCell = tableView.dequeueReusableCell(withIdentifier: "resultCell") {
+            cell = reuseCell
+        }
+        let result = results[indexPath.section]
+        let car = result.cars[indexPath.row]        
+        cell.textLabel?.text = "\(car.vehicleInfo.acrissCode)"
+        cell.detailTextLabel?.text = "\(car.vehicleInfo.type)"
+        return cell
     }
 }
 
