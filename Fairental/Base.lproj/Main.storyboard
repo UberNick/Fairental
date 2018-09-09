@@ -22,18 +22,27 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="x3d-Mc-cox">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="x3d-Mc-cox" firstAttribute="trailing" secondItem="8bX-7o-778" secondAttribute="trailing" id="5KG-CO-Pqz"/>
                             <constraint firstItem="r7r-h3-gkD" firstAttribute="top" secondItem="8bX-7o-778" secondAttribute="top" id="AY6-ff-LH7"/>
+                            <constraint firstItem="x3d-Mc-cox" firstAttribute="leading" secondItem="8bX-7o-778" secondAttribute="leading" id="DRI-Z5-ypS"/>
                             <constraint firstItem="r7r-h3-gkD" firstAttribute="trailing" secondItem="8bX-7o-778" secondAttribute="trailing" id="In1-dU-r1J"/>
                             <constraint firstItem="r7r-h3-gkD" firstAttribute="leading" secondItem="8bX-7o-778" secondAttribute="leading" id="Shd-ye-gX9"/>
                             <constraint firstItem="r7r-h3-gkD" firstAttribute="bottom" secondItem="8bX-7o-778" secondAttribute="bottom" id="vA9-bu-G5q"/>
+                            <constraint firstItem="x3d-Mc-cox" firstAttribute="top" secondItem="8bX-7o-778" secondAttribute="top" id="xqn-jY-3o7"/>
+                            <constraint firstItem="8bX-7o-778" firstAttribute="bottom" secondItem="x3d-Mc-cox" secondAttribute="bottom" id="yQP-Rm-pht"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8bX-7o-778"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" image="icon_car" id="gd5-jm-V9b"/>
                     <connections>
+                        <outlet property="spinner" destination="x3d-Mc-cox" id="2BH-DP-1xb"/>
                         <outlet property="tableView" destination="r7r-h3-gkD" id="PvT-hb-1f3"/>
                     </connections>
                 </viewController>
