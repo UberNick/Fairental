@@ -33,6 +33,9 @@
                         <viewLayoutGuide key="safeArea" id="8bX-7o-778"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" image="icon_car" id="gd5-jm-V9b"/>
+                    <connections>
+                        <outlet property="tableView" destination="r7r-h3-gkD" id="PvT-hb-1f3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvE-vy-eji" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

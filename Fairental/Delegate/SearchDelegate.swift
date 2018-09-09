@@ -14,6 +14,12 @@ class SearchDelegate: Networkable {
     
     private var requestData: SearchRequest!
     
+    enum Notification: String {
+        case execute = "SearchDelegate.execute"
+        case response = "SearchDelegate.response"
+        case error = "SearchDelegate.error"
+    }
+    
     init(_ model: SearchViewModel) {
         requestData = SearchRequest(
             latitude: 35.1504,
@@ -24,7 +30,7 @@ class SearchDelegate: Networkable {
     }
     
     func execute() {
-        post("searchExecute")
+        post(Notification.execute.rawValue)
         var urlComponents = URLComponents(string: endpoint)
         urlComponents?.queryItems = parameterize(requestData)
         guard let url = urlComponents?.url else {
@@ -41,11 +47,11 @@ class SearchDelegate: Networkable {
             self.error()
             return
         }
-        post("searchResponse", decodeData(data))
+        post(Notification.response.rawValue, decodeData(data))
     }
     
     func error() {
-        post("searchError")
+        post(Notification.error.rawValue)
     }
     
     func decodeData(_ data: Data?) -> SearchResponse? {
