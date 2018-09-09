@@ -14,8 +14,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var viewModel: ResultViewModel!
-    var selectedCar: Car!
-    var selectedProvider: CarProvider!
+    var selectedDetails: DetailViewModel!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -27,9 +26,8 @@ class ResultViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CarDetailViewController {
-            destination.car = selectedCar
-            destination.provider = selectedProvider
+        if let destination = segue.destination as? DetailViewController {
+            destination.viewModel = selectedDetails
         }        
     }
     
@@ -89,8 +87,7 @@ extension ResultViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCar = viewModel.getCar(indexPath)
-        selectedProvider = viewModel.getProvider(indexPath.section)
+        selectedDetails = viewModel.getDetailViewModel(indexPath)
         performSegue(withIdentifier: "detailView", sender: self)
     }
 }

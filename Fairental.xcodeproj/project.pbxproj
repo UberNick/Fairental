@@ -18,9 +18,10 @@
 		D10E9A4221447B55004DF7A5 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
 		D10E9A4321447BBD004DF7A5 /* SearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D19DA9CC213E19B800D4AE11 /* SearchResponse.json */; };
 		D10E9A4521449035004DF7A5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A4421449035004DF7A5 /* ResultViewController.swift */; };
-		D10E9A472144D459004DF7A5 /* CarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A462144D459004DF7A5 /* CarDetailViewController.swift */; };
+		D10E9A472144D459004DF7A5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A462144D459004DF7A5 /* DetailViewController.swift */; };
 		D10E9A492144DC81004DF7A5 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A482144DC81004DF7A5 /* ResultViewModel.swift */; };
 		D10E9A4B2145831E004DF7A5 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A4A2145831E004DF7A5 /* DetailViewModel.swift */; };
+		D10E9A4D2145891B004DF7A5 /* DirectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10E9A4C2145891B004DF7A5 /* DirectionDelegate.swift */; };
 		D175EF97213F67C600116B6D /* TimelessDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF96213F67C600116B6D /* TimelessDateTests.swift */; };
 		D175EF99213F681600116B6D /* TimelessDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D175EF98213F681600116B6D /* TimelessDate.swift */; };
 		D19DA9C8213E12B300D4AE11 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */; };
@@ -64,9 +65,10 @@
 		D10E9A3C21447282004DF7A5 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		D10E9A3E2144774D004DF7A5 /* SearchDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegateTests.swift; sourceTree = "<group>"; };
 		D10E9A4421449035004DF7A5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		D10E9A462144D459004DF7A5 /* CarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewController.swift; sourceTree = "<group>"; };
+		D10E9A462144D459004DF7A5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D10E9A482144DC81004DF7A5 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		D10E9A4A2145831E004DF7A5 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		D10E9A4C2145891B004DF7A5 /* DirectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionDelegate.swift; sourceTree = "<group>"; };
 		D175EF96213F67C600116B6D /* TimelessDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelessDateTests.swift; sourceTree = "<group>"; };
 		D175EF98213F681600116B6D /* TimelessDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessDate.swift; sourceTree = "<group>"; };
 		D19DA9C7213E12B300D4AE11 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
@@ -194,7 +196,7 @@
 			children = (
 				D1A6B2D4213DB4CA0051BCF2 /* SearchViewController.swift */,
 				D10E9A4421449035004DF7A5 /* ResultViewController.swift */,
-				D10E9A462144D459004DF7A5 /* CarDetailViewController.swift */,
+				D10E9A462144D459004DF7A5 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +216,7 @@
 			children = (
 				D19DA9D2213E234C00D4AE11 /* Networkable.swift */,
 				D1E2715A213DDCDB003D0606 /* SearchDelegate.swift */,
+				D10E9A4C2145891B004DF7A5 /* DirectionDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -364,11 +367,12 @@
 				D19DA9D3213E234C00D4AE11 /* Networkable.swift in Sources */,
 				D10E9A3D21447282004DF7A5 /* Price.swift in Sources */,
 				D10E9A3121446FBF004DF7A5 /* CarProvider.swift in Sources */,
-				D10E9A472144D459004DF7A5 /* CarDetailViewController.swift in Sources */,
+				D10E9A472144D459004DF7A5 /* DetailViewController.swift in Sources */,
 				D1A6B2D5213DB4CA0051BCF2 /* SearchViewController.swift in Sources */,
 				D19DA9CB213E142E00D4AE11 /* SearchRequest.swift in Sources */,
 				D1A6B2D3213DB4CA0051BCF2 /* AppDelegate.swift in Sources */,
 				D10E9A352144713D004DF7A5 /* Address.swift in Sources */,
+				D10E9A4D2145891B004DF7A5 /* DirectionDelegate.swift in Sources */,
 				D175EF99213F681600116B6D /* TimelessDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

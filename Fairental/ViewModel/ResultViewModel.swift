@@ -15,12 +15,23 @@ class ResultViewModel {
         return results[section].provider
     }
     
+    func getLocation(_ section: Int) -> Location? {
+        return results[section].location
+    }
+    
     func getCars(_ section: Int) -> [Car] {
         return results[section].cars
     }
     
     func getCar(_ indexPath: IndexPath) -> Car {
         return getCars(indexPath.section)[indexPath.row]
+    }
+    
+    func getDetailViewModel(_ indexPath: IndexPath) -> DetailViewModel {
+        return DetailViewModel(
+            car: getCar(indexPath),
+            provider: getProvider(indexPath.section),
+            location: getLocation(indexPath.section))
     }
     
     func getTitleText(_ indexPath: IndexPath) -> String {
