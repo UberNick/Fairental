@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SearchDelegate: Networkable {
+class SearchDelegate: Networkable, Notifiable {
     
     let endpoint = "https://api.sandbox.amadeus.com/v1.2/cars/search-circle"
     
@@ -22,11 +22,11 @@ class SearchDelegate: Networkable {
     
     init(_ model: SearchViewModel) {
         requestData = SearchRequest(
-            latitude: 35.1504,
-            longitude: -114.57632,
-            radius: 42,
-            pickUp: TimelessDate(string: "2018-12-07")!,
-            dropOff: TimelessDate(string: "2018-12-08")!)
+            latitude: model.location!.latitude,
+            longitude: model.location!.longitude,
+            radius: 30,
+            pickUp: TimelessDate(date: model.pickup)!,
+            dropOff: TimelessDate(date: model.dropoff)!)
     }
     
     func execute() {

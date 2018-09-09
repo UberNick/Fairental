@@ -251,7 +251,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="location"/>
                                 <connections>
-                                    <action selector="searchTapped:" destination="sqX-MQ-oO7" eventType="primaryActionTriggered" id="MgS-VR-J1z"/>
+                                    <action selector="searchFieldAction:" destination="sqX-MQ-oO7" eventType="primaryActionTriggered" id="jwF-ck-cmL"/>
+                                    <action selector="searchFieldTapped:" destination="sqX-MQ-oO7" eventType="editingDidBegin" id="Pnu-1u-chE"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68o-Xj-8Wb">
@@ -260,6 +261,9 @@
                                     <accessibilityTraits key="traits" image="YES"/>
                                 </accessibility>
                                 <state key="normal" image="icon_location"/>
+                                <connections>
+                                    <action selector="locationTapped:" destination="sqX-MQ-oO7" eventType="touchUpInside" id="3gb-5u-es6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick up: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-Gh-SlD">
                                 <rect key="frame" x="20" y="90" width="66" height="21"/>
@@ -316,6 +320,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="d9L-GX-RsD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -335,15 +344,19 @@
                             <constraint firstItem="XWF-IT-c4S" firstAttribute="bottom" secondItem="3wf-kf-8GQ" secondAttribute="bottom" id="SzO-4p-A5p"/>
                             <constraint firstItem="68o-Xj-8Wb" firstAttribute="top" secondItem="3wf-kf-8GQ" secondAttribute="top" constant="24" id="V1m-bV-0pK"/>
                             <constraint firstItem="lBn-Cs-gSV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Z8-Wk-epz" secondAttribute="leading" constant="20" symbolic="YES" id="biE-wc-1sS"/>
+                            <constraint firstItem="d9L-GX-RsD" firstAttribute="top" secondItem="3wf-kf-8GQ" secondAttribute="top" id="cvo-U4-Z0D"/>
                             <constraint firstItem="gEh-y2-OZt" firstAttribute="trailing" secondItem="3wf-kf-8GQ" secondAttribute="trailing" id="dLU-UX-XOc"/>
+                            <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="d9L-GX-RsD" secondAttribute="trailing" id="gMv-2O-LCi"/>
                             <constraint firstItem="lBn-Cs-gSV" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="90" id="hcO-Jf-Zh9"/>
                             <constraint firstItem="Qmp-Gh-SlD" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="20" id="hh9-jF-wei"/>
                             <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="XWF-IT-c4S" secondAttribute="trailing" id="ib0-h6-nG1"/>
+                            <constraint firstItem="d9L-GX-RsD" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" id="oHl-Fn-hb6"/>
                             <constraint firstItem="iOH-fv-Spl" firstAttribute="top" secondItem="BQu-tN-uzk" secondAttribute="bottom" constant="15" id="oev-oM-SFz"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KSF-T3-aYZ" secondAttribute="trailing" constant="20" symbolic="YES" id="qy4-QO-XbA"/>
                             <constraint firstItem="3wf-kf-8GQ" firstAttribute="trailing" secondItem="68o-Xj-8Wb" secondAttribute="trailing" constant="25" id="s1u-hu-1K9"/>
                             <constraint firstItem="1vR-j9-inI" firstAttribute="top" secondItem="Qmp-Gh-SlD" secondAttribute="bottom" constant="20" id="sIc-oB-rgT"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iOH-fv-Spl" secondAttribute="trailing" constant="20" symbolic="YES" id="tdF-71-7dR"/>
+                            <constraint firstItem="3wf-kf-8GQ" firstAttribute="bottom" secondItem="d9L-GX-RsD" secondAttribute="bottom" id="wSv-yB-ORt"/>
                             <constraint firstItem="BQu-tN-uzk" firstAttribute="leading" secondItem="3wf-kf-8GQ" secondAttribute="leading" constant="20" id="yKf-bo-WqF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3wf-kf-8GQ"/>
@@ -358,6 +371,7 @@
                         <outlet property="dropoffButton" destination="KSF-T3-aYZ" id="a0q-gh-8Lq"/>
                         <outlet property="pickupButton" destination="iOH-fv-Spl" id="rWy-kf-DLm"/>
                         <outlet property="searchField" destination="BQu-tN-uzk" id="hyF-u8-uEk"/>
+                        <outlet property="spinner" destination="d9L-GX-RsD" id="nNt-kz-SeB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78h-ts-Hah" userLabel="First Responder" sceneMemberID="firstResponder"/>

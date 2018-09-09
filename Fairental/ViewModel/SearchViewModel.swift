@@ -10,6 +10,7 @@ import Foundation
 
 class SearchViewModel {
     var address: String = ""
+    var location: Location?
     var pickup: Date = Date()
     var dropoff: Date = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date() // tomorrow
     

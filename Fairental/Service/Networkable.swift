@@ -24,11 +24,6 @@ extension Networkable {
         return encoder
     }
     
-    func post(_ notification: String, _ payload: Any? = nil) {
-        let notificationName = Notification.Name(notification)
-        NotificationCenter.default.post(name: notificationName, object: payload)
-    }
-    
     func parameterize<T: Encodable>(_ data: T) -> [URLQueryItem] {
         guard let json = try? encoder.encode(data),
             let jsonObject = try? JSONSerialization.jsonObject(with: json),

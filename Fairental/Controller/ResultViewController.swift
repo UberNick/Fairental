@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController, Listenable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -45,11 +45,6 @@ class ResultViewController: UIViewController {
             self.spinner.stopAnimating()
             self.tableView.reloadData()
         }
-    }
-    
-    func listen(_ notificationName: String, _ selector: Selector) {
-        let notification = Notification.Name(notificationName)
-        NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
     }
 }
 

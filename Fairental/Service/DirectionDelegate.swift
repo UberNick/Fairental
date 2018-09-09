@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DirectionDelegate: Networkable {
+class DirectionDelegate: Networkable, Notifiable {
         
     enum Notification: String {
         case execute = "DirectionDelegate.execute"
