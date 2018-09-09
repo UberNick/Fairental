@@ -15,6 +15,7 @@ class ResultViewController: UIViewController {
     
     var viewModel: ResultViewModel!
     var selectedCar: Car!
+    var selectedProvider: CarProvider!
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -26,7 +27,10 @@ class ResultViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as? CarDetailViewController)?.car = selectedCar
+        if let destination = segue.destination as? CarDetailViewController {
+            destination.car = selectedCar
+            destination.provider = selectedProvider
+        }        
     }
     
     //MARK: - Notification Handlers
@@ -49,7 +53,6 @@ class ResultViewController: UIViewController {
         let notification = Notification.Name(notificationName)
         NotificationCenter.default.addObserver(self, selector: selector, name: notification, object: nil)
     }
-    
 }
 
 // MARK: - TableView Datasource
@@ -87,6 +90,7 @@ extension ResultViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCar = viewModel.getCar(indexPath)
+        selectedProvider = viewModel.getProvider(indexPath.section)
         performSegue(withIdentifier: "detailView", sender: self)
     }
 }
