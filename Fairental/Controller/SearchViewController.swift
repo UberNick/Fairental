@@ -22,6 +22,8 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var gradientBackpanel: UIView!
     
+    @IBOutlet weak var mapView: MKMapView!
+    
     var dateButtonEdited: UIButton?
     
     var viewModel = SearchViewModel()
@@ -48,7 +50,6 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         listen(ReverseGeocodeDelegate.Notification.execute.rawValue, #selector(addressWillLoad))
         listen(ReverseGeocodeDelegate.Notification.response.rawValue, #selector(addressDidLoad))
         listen(ReverseGeocodeDelegate.Notification.error.rawValue, #selector(addressDidLoad))
-        
         listen(GeocodeDelegate.Notification.response.rawValue, #selector(locationDidLoad))
     }
     
@@ -76,6 +77,7 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         }
         viewModel.location = Location(latitude: location.coordinate.latitude,
                                       longitude: location.coordinate.longitude)
+        focusMap(viewModel.location)
     }
     
     @objc func addressWillLoad(notification: Notification) {
@@ -93,6 +95,7 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         }
         viewModel.address = placemark.postalCode ?? ""
         searchField.text = viewModel.address
+        focusMap(viewModel.location)
     }
     
     //MARK: - IBActions
@@ -165,6 +168,17 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         layer.startPoint = CGPoint(x: 0, y: 1)
         layer.endPoint = CGPoint(x: 0, y: 0)
         return layer
+    }
+    
+    func focusMap(_ location: Location?) {
+        guard let location = location else {
+            return
+        }
+        let coordinate = CLLocationCoordinate2D(latitude: location.latitude,
+                                                longitude: location.longitude)
+        let radiusInMeters = 30000.0
+        let region = MKCoordinateRegionMakeWithDistance(coordinate, radiusInMeters, radiusInMeters)
+        mapView.setRegion(region, animated: true)
     }
     
     func showDatePicker(animated: Bool = false) {

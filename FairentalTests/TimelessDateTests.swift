@@ -94,7 +94,12 @@ class DateStringTests: XCTestCase {
     
     // reverse compute string from date without using formatters
     func stringFrom(_ date: Date) -> String? {
-        let components = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        if let timeZone = TimeZone(abbreviation: "UTC") {
+            calendar.timeZone = timeZone
+        }        
+        let components = calendar.dateComponents([.year, .month, .day], from: date)
+        
         guard let year = components.year, let month = components.month, let day = components.day else {
             XCTFail("Nil date components unexpected")
             return nil

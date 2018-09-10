@@ -271,9 +271,6 @@
                             </textField>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Re8-in-nuU">
                                 <rect key="frame" x="0.0" y="78" width="375" height="540"/>
-                                <connections>
-                                    <outlet property="delegate" destination="sqX-MQ-oO7" id="VzK-v5-oBA"/>
-                                </connections>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRO-Fh-yYB">
                                 <rect key="frame" x="0.0" y="70" width="375" height="123"/>
@@ -404,6 +401,7 @@
                         <outlet property="dateToolbar" destination="gEh-y2-OZt" id="pvg-Xf-vQw"/>
                         <outlet property="dropoffButton" destination="KSF-T3-aYZ" id="a0q-gh-8Lq"/>
                         <outlet property="gradientBackpanel" destination="VRO-Fh-yYB" id="2nZ-Rv-UQi"/>
+                        <outlet property="mapView" destination="Re8-in-nuU" id="Fq7-DD-BOj"/>
                         <outlet property="pickupButton" destination="iOH-fv-Spl" id="rWy-kf-DLm"/>
                         <outlet property="searchField" destination="BQu-tN-uzk" id="hyF-u8-uEk"/>
                         <outlet property="spinner" destination="d9L-GX-RsD" id="nNt-kz-SeB"/>
