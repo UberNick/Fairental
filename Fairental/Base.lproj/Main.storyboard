@@ -13,7 +13,7 @@
         <!--Results-->
         <scene sceneID="Cx2-AV-Z2b">
             <objects>
-                <viewController id="121-n2-iYO" customClass="ResultViewController" customModule="Fairental" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="121-n2-iYO" customClass="ResultViewController" customModule="Fairental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xuI-Sc-LSk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="2530" y="561"/>
         </scene>
-        <!--Results-->
+        <!--Result Navigation Controller-->
         <scene sceneID="2tI-zf-CMi">
             <objects>
-                <navigationController id="1rE-q7-tlN" sceneMemberID="viewController">
+                <navigationController title="Result Navigation Controller" id="1rE-q7-tlN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Results" image="icon_car" id="rC6-hG-XCl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0cV-hd-gSh">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -77,13 +77,16 @@
         <!--Directions-->
         <scene sceneID="x64-KE-3IE">
             <objects>
-                <viewController title="Directions" id="fXg-dX-hGH" customClass="DirectionViewController" customModule="Fairental" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DirectionViewController" id="fXg-dX-hGH" customClass="DirectionViewController" customModule="Fairental" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r1s-Qh-WUr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x30-Xb-VYo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fXg-dX-hGH" id="mVE-3l-brL"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

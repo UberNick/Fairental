@@ -34,6 +34,14 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         hideDatePicker()
         
         //TODO init result VC so it registers for listeners
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc1 = storyBoard.instantiateViewController(withIdentifier: "ResultViewController")
+        let vc2 = storyBoard.instantiateViewController(withIdentifier: "DirectionViewController")
+        
+        tabBarController?.viewControllers?.forEach {
+            print($0 == vc1)
+            print($0 == vc2)
+        }
         
         listen(ReverseGeocodeDelegate.Notification.execute.rawValue, #selector(addressWillLoad))
         listen(ReverseGeocodeDelegate.Notification.response.rawValue, #selector(addressDidLoad))

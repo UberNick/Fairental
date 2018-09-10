@@ -15,8 +15,8 @@ class DirectionViewController: UIViewController, Listenable {
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
-        listen(SearchDelegate.Notification.execute.rawValue, #selector(directionsWillLoad))
-        listen(SearchDelegate.Notification.response.rawValue, #selector(directionsDidLoad))
+        listen(DirectionDelegate.Notification.execute.rawValue, #selector(directionsWillLoad))
+        listen(DirectionDelegate.Notification.response.rawValue, #selector(directionsDidLoad))
     }
     
     //MARK: - Notification Handlers
