@@ -7,10 +7,11 @@
 
 All data is provided by [Amadeus API](https://sandbox.amadeus.com/)
 
-## Design Features
+## Assets
+  * Images are open source from Material Design
+  * Some manipulated for this project using Gimp
 
-### Images are open source
-  * Adapted from Material Design and manipulated using Gimp
+## Design Features
 
 ### Storyboards and AutoLayout
   * Suited for all-sized devices from iPhone SE through iPhone X
