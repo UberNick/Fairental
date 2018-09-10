@@ -19,7 +19,7 @@ class ResultViewController: UIViewController, Listenable, AlertPresentable {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewModel = ResultViewModel()
         listen(SearchDelegate.Notification.execute.rawValue, #selector(resultsWillLoad))
         listen(SearchDelegate.Notification.response.rawValue, #selector(resultsDidLoad))
