@@ -14,13 +14,13 @@ class DirectionViewController: UIViewController, Listenable {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         listen(DirectionDelegate.Notification.execute.rawValue, #selector(directionsWillLoad))
         listen(DirectionDelegate.Notification.response.rawValue, #selector(directionsDidLoad))
     }
     
-    //MARK: - Notification Handlers
+    // MARK: - Notification Handlers
     @objc func directionsWillLoad(notification: Notification) {
         DispatchQueue.main.async {
             self.spinner.startAnimating()
@@ -43,7 +43,9 @@ class DirectionViewController: UIViewController, Listenable {
 
 extension DirectionViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let polyLine = overlay as! MKPolyline
+        guard let polyLine = overlay as? MKPolyline else {
+            return MKOverlayRenderer(overlay: MKPolyline(points: [], count: 0))
+        }
         let renderer = MKPolylineRenderer(polyline: polyLine)
         renderer.strokeColor = .blue
         return renderer

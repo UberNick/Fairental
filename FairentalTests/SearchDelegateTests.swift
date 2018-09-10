@@ -32,5 +32,3 @@ class SearchDelegateTests: XCTestCase {
         return nil
     }
 }
-
-

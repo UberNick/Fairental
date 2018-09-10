@@ -29,15 +29,15 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
     var viewModel = SearchViewModel()
     var locationManager = CLLocationManager()
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         hideDatePicker()
         
         // initialize other tabs so their notification listeners are active
         tabBarController?.viewControllers?.forEach { viewController in
-            let _ = viewController.view
-            let _ = (viewController as? UINavigationController)?.viewControllers.first?.view
+            _ = viewController.view
+            _ = (viewController as? UINavigationController)?.viewControllers.first?.view
         }
         
         // set up location
@@ -69,7 +69,7 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         gradientBackpanel.layer.addSublayer(layer)
     }
     
-    //MARK: - Notification Handlers
+    // MARK: - Notification Handlers
     @objc func locationDidLoad(notification: Notification) {
         guard let placemark = notification.object as? CLPlacemark,
             let location = placemark.location else {
@@ -98,7 +98,7 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         focusMap(viewModel.location)
     }
     
-    //MARK: - IBActions
+    // MARK: - IBActions
     @IBAction func dateButtonTapped(_ sender: Any) {
         guard let button = sender as? UIButton else {
             return
@@ -160,7 +160,7 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         hideAllInputControls()
     }
     
-    //MARK: - Helper and Hide/Show Functions
+    // MARK: - Helper and Hide/Show Functions
     func gradientLayer(rect: CGRect, colors: [UIColor]) -> CAGradientLayer {
         let layer = CAGradientLayer()
         layer.frame = rect
@@ -205,10 +205,10 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
 extension SearchViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     switch status {
-        case .restricted, .denied: break
-        case .authorizedWhenInUse, .authorizedAlways: break
-        case .notDetermined: break
-        }
+    case .restricted, .denied: break
+    case .authorizedWhenInUse, .authorizedAlways: break
+    case .notDetermined: break
+    }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -16,7 +16,7 @@ class ResultViewController: UIViewController, Listenable, AlertPresentable {
     var viewModel: ResultViewModel!
     var selectedDetails: DetailViewModel!
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +33,7 @@ class ResultViewController: UIViewController, Listenable, AlertPresentable {
         }        
     }
     
-    //MARK: - Notification Handlers
+    // MARK: - Notification Handlers
     @objc func resultsWillLoad(notification: Notification) {
         DispatchQueue.main.async {
             self.spinner.startAnimating()

@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     
     var viewModel: DetailViewModel!
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         companyName.text = viewModel.provider.companyName
         
@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    //MARK: - Actions
+    // MARK: - Actions
     @IBAction func directionButtonTapped(_ sender: Any) {
         // open directions page
         (parent?.parent as? UITabBarController)?.selectedIndex = 2
