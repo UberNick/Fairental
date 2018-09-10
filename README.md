@@ -5,11 +5,11 @@
 
 ## API
 
-All data is provided by [Amadeus API](https://sandbox.amadeus.com/)
+Service API provided by [Amadeus API](https://sandbox.amadeus.com/).  Map and Location data is obtained through Apple's CoreLocation services.
 
 ## Assets
-  * Images are open source from Material Design
-  * Some manipulated for this project using Gimp
+
+Images are open source from Material Design.  Some were manipulated for this project using Gimp.  All are free to reuse under Apache 2.0.
 
 ## Design Features
 
