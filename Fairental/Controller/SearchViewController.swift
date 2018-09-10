@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class SearchViewController: UIViewController, Listenable, AlertPresentable {
 
@@ -19,25 +20,25 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var gradientBackpanel: UIView!
     
     var dateButtonEdited: UIButton?
     
-    var viewModel: SearchViewModel!
-    var locationManager: CLLocationManager!
+    var viewModel = SearchViewModel()
+    var locationManager = CLLocationManager()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = SearchViewModel()
         hideDatePicker()
         
-        //initialize other tabs so their notification listeners are active
+        // initialize other tabs so their notification listeners are active
         tabBarController?.viewControllers?.forEach { viewController in
             let _ = viewController.view
             let _ = (viewController as? UINavigationController)?.viewControllers.first?.view
         }
         
-        locationManager = CLLocationManager()
+        // set up location
         locationManager.delegate = self
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
             locationManager.requestLocation()
@@ -55,6 +56,16 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         searchField.text = viewModel.address
         pickupButton.setTitle(viewModel.displayPickup, for: .normal)
         dropoffButton.setTitle(viewModel.displayDropoff, for: .normal)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        gradientBackpanel.layer.sublayers?.forEach {
+            $0.removeFromSuperlayer()
+        }
+        let layer = gradientLayer(rect: gradientBackpanel.bounds, colors: [
+            UIColor.white.withAlphaComponent(0.5),
+            UIColor.white.withAlphaComponent(1.0)])
+        gradientBackpanel.layer.addSublayer(layer)
     }
     
     //MARK: - Notification Handlers
@@ -146,7 +157,16 @@ class SearchViewController: UIViewController, Listenable, AlertPresentable {
         hideAllInputControls()
     }
     
-    //MARK: - Hide/Show Functions
+    //MARK: - Helper and Hide/Show Functions
+    func gradientLayer(rect: CGRect, colors: [UIColor]) -> CAGradientLayer {
+        let layer = CAGradientLayer()
+        layer.frame = rect
+        layer.colors = colors.map { $0.cgColor }
+        layer.startPoint = CGPoint(x: 0, y: 1)
+        layer.endPoint = CGPoint(x: 0, y: 0)
+        return layer
+    }
+    
     func showDatePicker(animated: Bool = false) {
         hideKeyboard()
         datePicker.isHidden = false
